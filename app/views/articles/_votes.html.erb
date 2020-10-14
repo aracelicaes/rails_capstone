@@ -1,0 +1,8 @@
+<% if user_signed_in? && current_user.votes?(@article) %>
+  <%= link_to 'Downvote', article_vote_path(@article), method: :delete %>
+<% else %>
+  <%= link_to 'Upvote', article_vote_path(@article), method: :post %>  
+<% end %>
+
+<%= @article.votes.count %>
+

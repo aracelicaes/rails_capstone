@@ -15,4 +15,9 @@ class User < ApplicationRecord
             format: { with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i, on: :create }
 
   has_many :articles, foreign_key: :author_id
+  has_many :votes
+
+  def votes?(article)
+    article.votes.where(user_id: id).any?
+  end
 end
