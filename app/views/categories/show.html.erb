@@ -10,5 +10,14 @@
   <%= @category.priority %>
 </p>
 
-<%= link_to 'Edit', edit_category_path(@category) %> |
-<%= link_to 'Back', categories_path %>
+<p>
+  <strong>Articles:</strong>
+  <% @category.articles.each do |article| %>
+    <li><%= article.title %></li>
+  <% end %>
+</p>
+
+<!-- Remove after nav bar creation-->
+<%= link_to 'Back to Categories', categories_path %>
+<br>
+<%= link_to 'Back to Articles', articles_path %>
