@@ -22,7 +22,8 @@
   </div>
 
   <div class="field">
-    <%= form.field :category_id, %>
+  <!--form.collection_select :article, :category_id, Category.all, :id, :name, prompt: true doesnt work cause form already knows it belongs to article-->
+    <%= form.collection_select(:category_id, Category.all, :id, :name, {prompt: true}) %>
   </div>
 
   <div class="actions">
