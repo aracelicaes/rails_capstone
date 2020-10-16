@@ -13,8 +13,7 @@ module ApplicationHelper
   #     # category.name
   #   #end
   # # end
-  
-  
+
   # if user_signed_in?
   #   #link_to Sign_Out destroy_user_session_path, method: :delete
   #   # <%= link_to 'New Article', new_article_path %> <br>
@@ -28,10 +27,9 @@ module ApplicationHelper
   # def nav_links_helper
   #   if user_signed_in?
   #     content_tag(:div, class: 'd-flex mt-1') do
-  #       linkt_to 
+  #       linkt_to
   #     end
   #   else
   #   end
   # end
-
 end
