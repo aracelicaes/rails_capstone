@@ -28,6 +28,11 @@ gem 'turbolinks', '~> 5'
 # Flexible authentication solution for Rails with Warden
 gem 'devise'
 
+# The most popular HTML, CSS, and JavaScript framework for developing responsive, mobile first projects on the web. http://getbootstrap.com
+gem 'bootstrap', '~> 4.5', '>= 4.5.2'
+
+gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.5'
+
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 

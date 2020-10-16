@@ -71,7 +71,7 @@ end
 end
 
 3.times do |index|
-  Article.create!((author: User.find_by(username: 'Barry'),
+  Article.create!(author: User.find_by(username: 'Barry'),
                 title: Faker::Lorem.sentence(word_count: 3),
                 text: Faker::Lorem.paragraphs(number: 6),
                 category: Category.find_by(priority: 3)
@@ -79,7 +79,7 @@ end
 end
 
 3.times do |index|
-  Article.create!((author: User.find_by(username: 'Lola'),
+  Article.create!(author: User.find_by(username: 'Lola'),
                 title: Faker::Lorem.sentence(word_count: 3),
                 text: Faker::Lorem.paragraphs(number: 6),
                 category: Category.find_by(priority: 4)
@@ -87,8 +87,8 @@ end
 end
 
 3.times do |index|
-  Article.create!((author: User.find_by(username: 'Tony'),
-                title: Faker::Lorem.sentence(3, false, 0).chop,
+  Article.create!(author: User.find_by(username: 'Tony'),
+                title: Faker::Lorem.sentence(word_count: 3),
                 text: Faker::Lorem.paragraphs(number: 6),
                 category: Category.find_by(priority: 5)
 )
@@ -98,4 +98,3 @@ end
 p "Created #{Category.count} categories."
 p "Created #{User.count} users."
 p "Created #{Article.count} articles."
-
