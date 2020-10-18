@@ -20,19 +20,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Mukta:wght@700;800&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400&display=swap");
 
-$bckg_nav: #ffffff;
+$bckg_nav: #fff;
 $nav_li: #6e6788;
 $bckg_footer: #52424d;
 $footer_li: #bb7129;
 $art_categ: #a16394;
 $color_titles: #52424d;
 $art_text: black;
-$bckg_one: rgb(2,0,36);
-$grad_bckg_one: linear-gradient(336deg, rgba(2,0,36,0.8001401244091386) 0%, rgba(194,94,172,0.6124650543811274) 35%, rgba(184,166,179,0.4023810207676821) 100%);
-$bckg_two: rgb(82,66,77);
-$grad_back_two: linear-gradient(346deg, rgba(82,66,77,0.7217087518601191) 0%, rgba(187,113,41,0.5284314409357493) 34%, rgba(184,166,179,0.5620448863139005) 100%);
-$bckg_gloss: rgb(255,253,253);
-$grad_bckd_gloss: linear-gradient(346deg, rgba(255,253,253,0.7973390039609594) 0%, rgba(255,255,255,0.6572829815519958) 34%, rgba(255,255,255,0.3939776594231442) 100%); 
+$bckg_one: rgb(2, 0, 36);
+$grad_bckg_one: linear-gradient(336deg, rgba(2, 0, 36, 0.8001401244091386) 0%, rgba(194, 94, 172, 0.6124650543811274) 35%, rgba(184, 166, 179, 0.4023810207676821) 100%);
+$bckg_two: rgb(82, 66, 77);
+$grad_back_two: linear-gradient(346deg, rgba(82, 66, 77, 0.7217087518601191) 0%, rgba(187, 113, 41, 0.5284314409357493) 34%, rgba(184, 166, 179, 0.5620448863139005) 100%);
+$bckg_gloss: rgb(255, 253, 253);
+$grad_bckd_gloss: linear-gradient(346deg, rgba(255, 253, 253, 0.7973390039609594) 0%, rgba(255, 255, 255, 0.6572829815519958) 34%, rgba(255, 255, 255, 0.3939776594231442) 100%);
 
 * {
   margin: 0;
@@ -69,31 +69,37 @@ a {
   text-decoration: none;
 }
 
-
 nav {
   background-color: $bckg_nav;
+
   .logo {
-      color: $color_titles;
-      font-family: 'Prata', serif;
-      font-weight: 700;
-      font-size: 32px;
-    }
+    color: $color_titles;
+    font-family: 'Prata', serif;
+    font-weight: 700;
+    font-size: 32px;
+  }
+
   .logo:hover {
     color: $color_titles;
   }
-  a, .session_li {
+
+  a,
+  .session_li {
     color: $nav_li;
     font-size: 18px;
     font-family: 'Mukta', sans-serif;
   }
+
   .session_ic {
     color: $nav_li;
     font-size: 18px;
   }
+
   a:hover {
     text-decoration: none;
     color: $footer_li;
   }
+
   a:active {
     color: $footer_li;
   }
