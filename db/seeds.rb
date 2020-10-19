@@ -60,7 +60,7 @@ User.create! ([{
                 text: Faker::Lorem.paragraphs(number: 5),
                 category: Category.find_by(priority: 1)
   )
-  article.image.attach(io: File.open('/app/assets/images/'), filename: 'file.pdf')
+  article.image.attach(io: File.open('/app/assets/images/'), filename: 'file.jpg')
   article.save
 end
 

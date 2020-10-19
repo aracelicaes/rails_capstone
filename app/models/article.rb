@@ -7,6 +7,7 @@ class Article < ApplicationRecord
   validates :category, presence: true
 
   has_one_attached :image
+  # create a scope includes(image_attachment: :blob) 
   belongs_to :author, class_name: 'User'
   belongs_to :category
   has_many :votes

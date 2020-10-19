@@ -39,6 +39,7 @@ $grad_bckd_gloss: linear-gradient(346deg, rgba(255, 253, 253, 0.7973390039609594
   padding: 0;
   box-sizing: border-box;
   outline: none;
+  overflow-x: hidden;
 }
 
 body {
@@ -52,6 +53,7 @@ body {
 h2,
 h3 {
   font-family: 'Mukta', sans-serif;
+  overflow-y: hidden;
 }
 
 h4,
@@ -59,6 +61,7 @@ h5,
 h6 {
   font-family: 'Rubik', sans-serif;
   font-weight: 400;
+  overflow-y: hidden;
 }
 
 ul {
@@ -66,6 +69,10 @@ ul {
 }
 
 a {
+  text-decoration: none;
+}
+
+a.hover {
   text-decoration: none;
 }
 
@@ -102,5 +109,54 @@ nav {
 
   a:active {
     color: $footer_li;
+  }
+}
+
+.session {
+  background-image: url(estilo_mty.jpg);
+  background-color: $color_titles;
+  background-repeat: no-repeat;
+  background-position: 0% 84%;
+  h2 {
+    padding-top: 4%;
+    overflow-y: hidden;
+    font-size: 35px;
+  }
+  h2, form {
+    color: whitesmoke;
+    margin-left: 70%;
+    max-width: 500px;
+  }
+
+  a {
+    color: whitesmoke;
+    font-size: 18px;
+    font-weight: 400;
+    padding-bottom: 2%;
+  }
+
+  form {
+    padding-bottom: 4%;
+    div {
+      label {
+        font-size: 20px;
+      }
+      input {
+        width: 250px;
+        font-size: 18px;
+      }
+      .fixed-width-box {
+        width: 50px !important;
+        align-self: center;
+      }
+      .fixed-width {
+        width: 200px !important;
+      }
+      .session_button {
+        font-size: 20px;
+        background-color: whitesmoke;
+        color: $color_titles;
+      }
+    }
   }
 }
