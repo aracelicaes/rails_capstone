@@ -1,5 +1,10 @@
 <p id="notice"><%= notice %></p>
 
+<p>
+  <strong>Image</strong>
+  <!-- This line checks if url for attached img exists if it does then it'll render -->
+  <%= image_tag url_for(@article.image) if @article.image.attached? %>
+</p>
 
 <p>
   <strong>Title:</strong>

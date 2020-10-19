@@ -6,6 +6,7 @@ class Article < ApplicationRecord
   validates :author, presence: true
   validates :category, presence: true
 
+  has_one_attached :image
   belongs_to :author, class_name: 'User'
   belongs_to :category
   has_many :votes

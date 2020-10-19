@@ -55,11 +55,13 @@ User.create! ([{
 }])
 
 3.times do |index|
-  Article.create!(author: User.find_by(username: 'Lola'), 
+  article = Article.create!(author: User.find_by(username: 'Lola'), 
                 title: Faker::Lorem.sentence(word_count: 3),
                 text: Faker::Lorem.paragraphs(number: 5),
                 category: Category.find_by(priority: 1)
   )
+  article.image.attach(io: File.open('/app/assets/images/'), filename: 'file.pdf')
+  article.save
 end
 
 3.times do |index|
