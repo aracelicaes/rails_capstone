@@ -1,10 +1,15 @@
 class ArticlesController < ApplicationController
   before_action :set_article, only: %i[show edit update destroy]
+  # before_action :most_votes, only: :index
   before_action :authenticate_user!
 
   # GET /articles
   def index
     @articles = Article.all
+    @most_voted_article = Article.most_voted.first
+    @last_written_article = Article.last
+    @categories_with_articles = Category.categories_with_articles
+    # @category_latest_article = Article.latest_article(categories)
   end
 
   # GET /articles/1

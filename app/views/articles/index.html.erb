@@ -1,41 +1,91 @@
-<h1>Articles</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Text</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @articles.each do |article| %>
+<section class="articles_index">
+  <div class="row">
+    <!-- Most Voted Article REMOVE THE BORDER LATER -->
+      <div class="most_voted_article col-8 border border-primary">
+        Mas Votado
+        <%= @most_voted_article.title %>
+        <% if @most_voted_article.image.attached? %>
+            <td><%= image_tag url_for(@most_voted_article.image) %></td>
+          <% end %>
+        <%= @most_voted_article.category.name %>
+      </div>
+      <div class="most_voted_article col-4 border border-primary">
+          Last Written Article
+          <%= @last_written_article.title %>
+        <% if @last_written_article.image.attached? %>
+            <td><%= image_tag url_for(@last_written_article.image) %></td>
+          <% end %>
+      </div>
+  </div>
+  <div class="row">
+    <!-- Categories in ascending order of priority with latest article -->
+    <div class="most_voted_article col-12 border border-primary">
+        Categorias en order ascendente con su ultimo articlo publicado
+        Category.name
+        article.title
+        article.image
+        @categories_with_articles.each do |category|
+          <div class="row">
+          
+          <div class="col-3 border border-secondary">
+            Category.name
+            article.title
+            aritlce.image
+          </div>
+          <div class="col-3 border border-secondary">
+            Category.name
+            article.title
+            aritlce.image
+          </div>
+          <div class="col-3 border border-secondary">
+            Category.name
+            article.title
+            aritlce.image
+          </div>
+          <div class="col-3 border border-secondary">
+            Category.name
+            article.title
+            aritlce.image
+          </div>
+          <div class="col-3 border border-secondary">
+            Category.name
+            article.title
+            aritlce.image
+          </div>
+          </div>
+        end
+    </div>
+  </div>
+  <table>
+    <thead>
       <tr>
-        <td><%= article.title %></td>
-        <td><%= article.text %></td>
-        <td><%= image_tag url_for(article.image) if article.image.attached? %></td>
-        <td><%= link_to 'Show', article %></td>
-        <td><%= link_to 'Edit', edit_article_path(article) %></td>
-        <td><%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th>Title</th>
+        <th>Text</th>
+        <th colspan="3"></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
 
-<br>
+    <tbody>
+      <% @articles.each do |article| %>
+        <tr>
+          <td><%= article.title %></td>
+          <td><%= article.text %></td>  
+          <% if article.image.attached? %>
+            <td><%= image_tag url_for(article.image) %></td>
+          <% end %>            
+          <td><%= article.votes.size %></td>
+          <td><%= article.category.name %></td>
+          <td><%= link_to 'Show', article %></td>
+          <td><%= link_to 'Edit', edit_article_path(article) %></td>
+          <td><%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
 
-<!-- REMOVE AFTER NAVBAR CREATION yes all of it -->
-<%= link_to 'New Article', new_article_path %> <br>
-<%= link_to 'See Categories', categories_path %>
-<br>
-
-<% if user_signed_in? %>
-  <%= link_to "Sign-Out", destroy_user_session_path, method: :delete  %>
-<% else %>
-  <%= link_to 'Sign In', new_user_session_path  %>
   <br>
-  <%= link_to 'Sign Up', new_user_registration_path  %>
-<% end %>
 
+  <!-- REMOVE AFTER NAVBAR CREATION yes all of it -->
+  <%= link_to 'See Categories', categories_path %>
 
+</section>
