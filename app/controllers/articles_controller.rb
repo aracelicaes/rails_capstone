@@ -6,9 +6,10 @@ class ArticlesController < ApplicationController
   # GET /articles
   def index
     @articles = Article.all
-    @most_voted_article = Article.most_voted.first
+    @most_voted_article = Article.most_voted
     @last_written_article = Article.last
-    @categories_with_articles = Category.categories_with_articles
+    # @categories_with_articles = Category.categs_articles_info
+    @categories_with_articles = Category.categories_with_articles.limit(4)
     # @category_latest_article = Article.latest_article(categories)
   end
 

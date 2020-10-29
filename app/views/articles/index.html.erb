@@ -1,91 +1,43 @@
 <section class="articles_index">
-  <div class="row">
+  <div class="top_row_article_index row">
     <!-- Most Voted Article REMOVE THE BORDER LATER -->
-      <div class="most_voted_article col-8 border border-primary">
-        Mas Votado
-        <%= @most_voted_article.title %>
-        <% if @most_voted_article.image.attached? %>
-            <td><%= image_tag url_for(@most_voted_article.image) %></td>
-          <% end %>
-        <%= @most_voted_article.category.name %>
-      </div>
-      <div class="most_voted_article col-4 border border-primary">
-          Last Written Article
-          <%= @last_written_article.title %>
-        <% if @last_written_article.image.attached? %>
-            <td><%= image_tag url_for(@last_written_article.image) %></td>
-          <% end %>
-      </div>
-  </div>
-  <div class="row">
-    <!-- Categories in ascending order of priority with latest article -->
-    <div class="most_voted_article col-12 border border-primary">
-        Categorias en order ascendente con su ultimo articlo publicado
-        Category.name
-        article.title
-        article.image
-        @categories_with_articles.each do |category|
-          <div class="row">
-          
-          <div class="col-3 border border-secondary">
-            Category.name
-            article.title
-            aritlce.image
-          </div>
-          <div class="col-3 border border-secondary">
-            Category.name
-            article.title
-            aritlce.image
-          </div>
-          <div class="col-3 border border-secondary">
-            Category.name
-            article.title
-            aritlce.image
-          </div>
-          <div class="col-3 border border-secondary">
-            Category.name
-            article.title
-            aritlce.image
-          </div>
-          <div class="col-3 border border-secondary">
-            Category.name
-            article.title
-            aritlce.image
-          </div>
-          </div>
-        end
+    <div class="most_voted_article col-9">
+      <%= link_to article_path(@most_voted_article), class: 'most_voted_links' do %>
+        <div class='link_container'>
+          <p><%= @most_voted_article.title %></p>
+          <p><%= @most_voted_article.text.slice!(0..200).concat('...') %></p>
+        </div>
+        <%= image_tag url_for(@most_voted_article.image) if @most_voted_article.image.attached? %>
+      <% end %>
+    </div>
+
+    <div class="last_article col-3">
+      <%= link_to article_path(@last_written_article) do %>
+        <div class='link_container'>
+          <p><%= @last_written_article.title %></p>
+        </div>
+        <%= image_tag url_for(@last_written_article.image) if @last_written_article.image.attached? %>
+      <% end %>
     </div>
   </div>
-  <table>
-    <thead>
-      <tr>
-        <th>Title</th>
-        <th>Text</th>
-        <th colspan="3"></th>
-      </tr>
-    </thead>
-
-    <tbody>
-      <% @articles.each do |article| %>
-        <tr>
-          <td><%= article.title %></td>
-          <td><%= article.text %></td>  
-          <% if article.image.attached? %>
-            <td><%= image_tag url_for(article.image) %></td>
-          <% end %>            
-          <td><%= article.votes.size %></td>
-          <td><%= article.category.name %></td>
-          <td><%= link_to 'Show', article %></td>
-          <td><%= link_to 'Edit', edit_article_path(article) %></td>
-          <td><%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        </tr>
+  
+  <div class="row bottom_row_article_index">
+    <!-- Categories in ascending order of priority with latest article -->    
+      <% @categories_with_articles.each do |e| %>
+        <div class="col-3 categories_with_last_article"> 
+          <div class="category_name">
+            <%= link_to category_path(e) do %>
+              <%= e.name.upcase %>
+            <% end %>
+          </div>
+          <div class="category_last_article">
+            <%= link_to article_path(e.articles.first) do %>
+              <%= e.articles.first.title %>
+              <%= image_tag url_for(e.articles.first.image) if e.articles.first.image.attached? %>
+            <% end %>
+          </div>
+        </div>
       <% end %>
-    </tbody>
-  </table>
-
-  <br>
-
-  <!-- REMOVE AFTER NAVBAR CREATION yes all of it -->
-  <%= link_to 'See Categories', categories_path %>
+  </div> 
 
 </section>

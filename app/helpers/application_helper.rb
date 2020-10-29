@@ -26,7 +26,7 @@ module ApplicationHelper
       content_tag(:div, class: 'session_li') do
         link_to new_article_path, class: 'd-flex flex-column align-items-center is-info mr-4' do
           content_tag(:small, class: 'pt-1') do
-            'WRITE ARTICLE'
+            'NEW ARTICLE'
           end
         end
       end +
@@ -47,7 +47,7 @@ module ApplicationHelper
           end
         end
     else
-      content_tag(:div, class: 'session_li mr-2') do
+      content_tag(:div, class: 'session_li mr-4') do
         link_to new_user_session_path do
           'SIGN IN'
         end

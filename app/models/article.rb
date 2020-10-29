@@ -21,16 +21,21 @@ class Article < ApplicationRecord
   # scope :by_score, :joins => :reviews, :group => "schools.id", :order => "AVG(reviews.score) DESC"
 
   #  scope :dry_clean_only, joins(:washing_instructions).where('washing_instructions.dry_clean_only = ?', true)
-  
-    
+
   # THESE ARE THE WORKING ONES RIGHT HERE!!!!!!
-  scope :most_voted, -> { joins(:votes).group('articles.id').order('votes.count DESC').includes(:category).limit(1) }
+  # scope :most_voted, -> { joins(:votes).group('articles.id').order('votes.count DESC').includes(:category).limit(1) }
+  scope :most_voted, -> { joins(:votes).group('articles.id').order('votes.count DESC').limit(1).first }
   # scope :latest_article, ->(categories) { joins(:category).where('categories.name' == '?', categories.name).last }
 
 
   # def total_votes
-  #   self.votes.count
+  #   votes.count
   # end
+
+  # Vote.group(:article.id).count 
+  # article1 , 20 votes 
+  # Article, 10 
+
 
   # def self.total_votes(article)
   #   order('votes.count DESC')

@@ -8,7 +8,9 @@ class CategoriesController < ApplicationController
   end
 
   # GET /categories/1
-  def show; end
+  def show
+    @category_with_articles_votes = Category.category_with_articles_votes
+  end
 
   # GET /categories/new
   def new
