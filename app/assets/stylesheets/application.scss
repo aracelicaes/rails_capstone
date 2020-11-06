@@ -64,9 +64,12 @@ $grad_bckg_two: linear-gradient(to bottom, rgba(29, 6, 12, 0.746), rgba(36, 2, 2
 
 @mixin article_index_img_containers {
   background-image: $grad_bckg_two;
+
   a {
     color: $contrast_color;
+
     @include mukta-bold;
+
     width: 100%;
     height: 100%;
   }
@@ -104,7 +107,6 @@ $grad_bckg_two: linear-gradient(to bottom, rgba(29, 6, 12, 0.746), rgba(36, 2, 2
   padding: 0;
   box-sizing: border-box;
   outline: none;
-  //overflow-x: hidden;
 }
 
 html {
@@ -117,9 +119,10 @@ html {
 body {
   background: #fff;
   position: relative;
-  @include rubik-normal;
-  font-size: 14px;
 
+  @include rubik-normal;
+
+  font-size: 14px;
   margin-right: 0;
   margin-left: 0;
 }
@@ -127,6 +130,7 @@ body {
 h2,
 h3 {
   @include mukta-bold;
+
   overflow-y: hidden;
 }
 
@@ -134,6 +138,7 @@ h4,
 h5,
 h6 {
   @include rubik-bold;
+
   overflow-y: hidden;
 }
 
@@ -155,7 +160,9 @@ img {
 
 .logo {
   color: $color_titles;
+
   @include prata-bolder;
+
   font-size: 30px;
 }
 
@@ -170,11 +177,13 @@ nav {
   margin-left: 0 !important;
   padding-left: 0 !important;
   height: 70px;
+
   a,
   .session_li {
     overflow-y: hidden;
     color: $nav_li;
     font-size: 16px;
+
     @include mukta-normal;
   }
 
@@ -260,12 +269,13 @@ nav {
   .fa-heart {
     color: rgb(1, 128, 100);
   }
+
   .fa-heart-o {
     color: $art_text;
   }
 
   .fa-heart-o:hover {
-    color: rgb(1, 128, 100);;
+    color: rgb(1, 128, 100);
   }
 }
 
@@ -360,7 +370,6 @@ nav {
   }
 }
 
-
 // FOOTER
 
 footer {
@@ -370,9 +379,8 @@ footer {
   margin-left: 0 !important;
   padding-left: 0 !important;
   height: 60px;
-  
   font-size: 14px;
-  
+
   .logo {
     color: $soft_white;
     font-size: 20px;
@@ -397,11 +405,11 @@ footer {
   .contact div {
     margin-top: -5px;
   }
+
   .contact a {
     color: $contrast_color;
     font-size: 24px;
   }
-
 }
 
 // CATEGORY SHOW
@@ -413,10 +421,12 @@ footer {
 .no_article {
   padding-top: 18%;
   padding-bottom: 15.5%;
+
   a {
     color: $contrast_color;
     margin-top: 2%;
   }
+
   a:hover {
     color: $bckg_footer;
   }
@@ -427,12 +437,13 @@ footer {
   width: 100%;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
-  
+
   .wrapper_details {
     display: flex;
     flex-direction: row;
     height: 350px;
   }
+
   .categ_article_wrapper2,
   .categ_article_wrapper3,
   .categ_article_wrapper6,
@@ -440,8 +451,7 @@ footer {
   .categ_article_wrapper10,
   .categ_article_wrapper11,
   .categ_article_wrapper14,
-  .categ_article_wrapper15
-   {
+  .categ_article_wrapper15 {
     display: flex;
     flex-direction: row-reverse !important;
   }
@@ -451,22 +461,26 @@ footer {
   width: 50%;
   position: relative;
   z-index: -1;
-    img {
-      width: 100%;
-      object-fit: cover;
-      object-position: 50% 50%;
-      filter: contrast(120%);
-      height: 350px;
-      max-height: 350px;
-    }
+
+  img {
+    width: 100%;
+    object-fit: cover;
+    object-position: 50% 50%;
+    filter: contrast(120%);
+    height: 350px;
+    max-height: 350px;
+  }
 }
 
 .categ_article_info {
   padding: 5%;
   width: 50%;
+
   .categ_show_name {
     color: $contrast_color;
+
     @include mukta-bolder;
+
     font-size: 18px;
     border-bottom: 2px solid $contrast_color;
   }
@@ -474,15 +488,21 @@ footer {
   .categ_article_title_text {
     color: $art_text;
     margin-top: 5%;
+
     a {
       color: $art_text;
+
       div {
         font-size: 18px;
+
         @include mukta-bolder;
+
         margin-bottom: 3%;
       }
+
       p {
         @include rubik-bold;
+
         font-size: 14px;
       }
     }
@@ -491,8 +511,6 @@ footer {
   .categ_articles_votes {
     font-size: 18px;
   }
- 
-
 }
 
 // CATEGORY INDEX
@@ -525,15 +543,19 @@ footer {
   font-size: 18px;
   font-weight: bolder;
   margin: 10px;
+
   .categ_name a {
     color: $bckg_footer;
   }
+
   .categ_name a:hover {
     color: $color_titles;
   }
+
   .categ_options a i {
     color: $bckg_footer;
   }
+
   .categ_options a i:hover {
     color: $color_titles;
   }
@@ -546,11 +568,13 @@ footer {
 
 .categ_new_edit_form {
   @include mukta-bolder;
+
   .field label {
     color: $bckg_footer;
     font-weight: bold !important;
     font-size: 20px;
   }
+
   .field input,
   .actions input {
     background-color: rgba(202, 138, 0, 0.609);
