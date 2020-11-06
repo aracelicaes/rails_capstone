@@ -1,21 +1,35 @@
-<p>
-  <strong>Name:</strong>
-  <%= @category.name %>
-</p>
-
-<p>
-  <strong>Priority:</strong>
-  <%= @category.priority %>
-</p>
-
-<p>
-  <strong>Articles:</strong>
-  <% @category.articles.each do |article| %>
-    <li><%= article.title %></li>
-  <% end %>
-</p>
-
-<!-- Remove after nav bar creation-->
-<%= link_to 'Back to Categories', categories_path %>
-<br>
-<%= link_to 'Back to Articles', articles_path %>
+<section class="category_show">
+  <div class="category_show_grid">
+    
+    <% if @category_with_articles_votes.articles.empty? %>
+      <h3 class="no_article d-flex flex-column align-items-center">
+        Sorry! Category: <%= @category_with_articles_votes.name %> Has No Articles Yet.
+        <%= link_to 'Click Here to Write the First Article!', new_article_path %>
+      </h3>
+      <% else %>
+        <div class="articles_in_category">
+          <% @category_with_articles_votes.articles.each_with_index do |e, i| %>
+            <div class="wrapper_details categ_article_wrapper<%= i %>">
+              <div class="categ_article_img">
+                <%= image_tag url_for(e.image) if e.image.attached? %>
+              </div>
+              <div class="categ_article_info">
+                <%= link_to category_path(@category_with_articles_votes), class: 'categ_show_name' do %>
+                  <%= @category_with_articles_votes.name %>
+                <% end %>
+                <div class="categ_article_title_text d-flex flex-column">
+                  <%= link_to article_path(e) do %>
+                    <div><%= e.title %></div>
+                    <p><%= truncate(e.text, length: 300, omission: '...(continue reading)') %></p>
+                  <% end %>
+                </div>
+                <div class="categ_articles_votes">
+                  <%= render partial: 'articles/votes', locals: { article: e}  %>
+                </div>
+              </div>
+            </div>
+          <% end %>
+        </div>
+    <% end %>
+  </div>
+</section>

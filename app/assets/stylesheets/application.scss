@@ -27,24 +27,53 @@ $bckg_footer: #1d080d;
 $contrast_color: #c86502;
 $art_categ: #ac599a;
 $color_titles: #52424d;
-$art_text: black;
+$art_text: rgb(10, 9, 9);
 $bckg_one: rgb(2, 0, 36);
 $grad_bckg_one: linear-gradient(to bottom, rgba(36, 2, 2, 0.061), rgb(29, 6, 12));
 $grad_bckg_two: linear-gradient(to bottom, rgba(29, 6, 12, 0.746), rgba(36, 2, 2, 0.061), rgba(29, 6, 12, 0.876));
+
+@mixin mukta-normal {
+  font-weight: normal;
+  font-family: 'Mukta', sans-serif;
+}
+
+@mixin mukta-bold {
+  font-weight: 700;
+  font-family: 'Mukta', sans-serif;
+}
+
+@mixin mukta-bolder {
+  font-weight: 800;
+  font-family: 'Mukta', sans-serif;
+}
+
+@mixin prata-bolder {
+  font-family: 'Prata', serif;
+  font-weight: 700;
+}
+
+@mixin rubik-normal {
+  font-family: 'Rubik', sans-serif;
+  font-weight: 300;
+}
+
+@mixin rubik-bold {
+  font-family: 'Rubik', sans-serif;
+  font-weight: 400;
+}
 
 @mixin article_index_img_containers {
   background-image: $grad_bckg_two;
   a {
     color: $contrast_color;
-    font-weight: bolder;
-    font-family: 'Mukta', sans-serif;
+    @include mukta-bold;
     width: 100%;
     height: 100%;
   }
 
   img {
     object-fit: cover;
-    object-position: 50% -185px;
+    object-position: 50% 50%;
     z-index: -1;
     position: absolute;
     top: 0;
@@ -88,8 +117,7 @@ html {
 body {
   background: #fff;
   position: relative;
-  font-family: 'Rubik', sans-serif;
-  font-weight: 300;
+  @include rubik-normal;
   font-size: 14px;
 
   margin-right: 0;
@@ -98,15 +126,14 @@ body {
 
 h2,
 h3 {
-  font-family: 'Mukta', sans-serif;
+  @include mukta-bold;
   overflow-y: hidden;
 }
 
 h4,
 h5,
 h6 {
-  font-family: 'Rubik', sans-serif;
-  font-weight: 400;
+  @include rubik-bold;
   overflow-y: hidden;
 }
 
@@ -128,9 +155,8 @@ img {
 
 .logo {
   color: $color_titles;
-  font-family: 'Prata', serif;
-  font-weight: 700;
-  font-size: 32px;
+  @include prata-bolder;
+  font-size: 30px;
 }
 
 .logo:hover {
@@ -143,17 +169,18 @@ nav {
   padding-right: 0 !important;
   margin-left: 0 !important;
   padding-left: 0 !important;
+  height: 70px;
   a,
   .session_li {
     overflow-y: hidden;
     color: $nav_li;
-    font-size: 18px;
-    font-family: 'Mukta', sans-serif;
+    font-size: 16px;
+    @include mukta-normal;
   }
 
   .session_ic {
     color: $nav_li;
-    font-size: 18px;
+    font-size: 16px;
   }
 
   .session_links {
@@ -227,6 +254,23 @@ nav {
   }
 }
 
+// VOTES
+
+.votes {
+  .fa-heart {
+    color: rgb(1, 128, 100);
+  }
+  .fa-heart-o {
+    color: $art_text;
+  }
+
+  .fa-heart-o:hover {
+    color: rgb(1, 128, 100);;
+  }
+}
+
+// ARTICLE INDEX
+
 .top_row_article_index {
   max-height: 400px;
   margin-right: 0 !important;
@@ -257,6 +301,7 @@ nav {
   img {
     width: 100%;
     max-height: 400px;
+    object-position: 54% 40%;
   }
 }
 
@@ -315,16 +360,17 @@ nav {
   }
 }
 
+
+// FOOTER
+
 footer {
   background-color: $bckg_footer;
   margin-right: 0 !important;
   padding-right: 0 !important;
   margin-left: 0 !important;
   padding-left: 0 !important;
-  height: 100%;
-}
-
-footer {
+  height: 60px;
+  
   font-size: 14px;
   
   .logo {
@@ -355,5 +401,95 @@ footer {
     color: $contrast_color;
     font-size: 24px;
   }
+
+}
+
+// CATEGORY SHOW
+.category_show {
+  background-image: url(pattern.png);
+}
+
+.no_article {
+  padding-top: 18%;
+  padding-bottom: 15.5%;
+  a {
+    color: $contrast_color;
+    margin-top: 2%;
+  }
+  a:hover {
+    color: $bckg_footer;
+  }
+}
+
+.articles_in_category {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  
+  .wrapper_details {
+    display: flex;
+    flex-direction: row;
+    height: 350px;
+  }
+  .categ_article_wrapper2,
+  .categ_article_wrapper3,
+  .categ_article_wrapper6,
+  .categ_article_wrapper7,
+  .categ_article_wrapper10,
+  .categ_article_wrapper11,
+  .categ_article_wrapper14,
+  .categ_article_wrapper15
+   {
+    display: flex;
+    flex-direction: row-reverse !important;
+  }
+}
+
+.categ_article_img {
+  width: 50%;
+  position: relative;
+  z-index: -1;
+    img {
+      width: 100%;
+      object-fit: cover;
+      object-position: 50% 50%;
+      filter: contrast(120%);
+      height: 350px;
+      max-height: 350px;
+    }
+}
+
+.categ_article_info {
+  padding: 5%;
+  width: 50%;
+  .categ_show_name {
+    color: $contrast_color;
+    @include mukta-bolder;
+    font-size: 18px;
+    border-bottom: 2px solid $contrast_color;
+  }
+
+  .categ_article_title_text {
+    color: $art_text;
+    margin-top: 5%;
+    a {
+      color: $art_text;
+      div {
+        font-size: 18px;
+        @include mukta-bolder;
+        margin-bottom: 3%;
+      }
+      p {
+        @include rubik-bold;
+        font-size: 14px;
+      }
+    }
+  }
+
+  .categ_articles_votes {
+    font-size: 18px;
+  }
+ 
 
 }

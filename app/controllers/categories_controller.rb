@@ -1,5 +1,5 @@
 class CategoriesController < ApplicationController
-  before_action :set_category, only: %i[show edit update destroy]
+  before_action :set_category, only: %i[edit update destroy]
   before_action :authenticate_user!
 
   # GET /categories
@@ -9,7 +9,7 @@ class CategoriesController < ApplicationController
 
   # GET /categories/1
   def show
-    @category_with_articles_votes = Category.category_with_articles_votes
+    @category_with_articles_votes = Category.categories_with_articles.find(params[:id])
   end
 
   # GET /categories/new

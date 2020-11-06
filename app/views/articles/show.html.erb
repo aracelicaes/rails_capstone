@@ -19,8 +19,8 @@
   <%= @article.text %>
 </p>
 
-<div id="votes">
-  <%= render partial: 'votes' %>
+<div class="votes">
+  <%= render partial: 'votes', locals: { article: @article } %>
 </div>
 
 <!-- Remove after nav bar creation-->

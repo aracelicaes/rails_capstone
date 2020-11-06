@@ -1,6 +1,6 @@
 module ApplicationHelper
   def category_display
-    Category.all
+    Category.all.limit(4)
   end
 
   def categories_nav_links
@@ -9,7 +9,7 @@ module ApplicationHelper
     category_display.collect do |category|
       list_item +=
         content_tag(:a) do
-          link_to category_path(category), class: 'mr-4' do
+          link_to category_path(category), class: 'mr-3' do
             category.name.upcase
           end
         end
@@ -37,28 +37,28 @@ module ApplicationHelper
             end
           end
         end +
-        content_tag(:div, class: 'session_li mr-4') do
+        content_tag(:div, class: 'session_li mr-2') do
           link_to destroy_user_session_path, method: :delete do
             'SIGN OUT'
           end
         end +
-        content_tag(:div, class: 'session_li mr-4') do
+        content_tag(:div, class: 'session_li mr-2') do
           content_tag(:i, class: 'session_ic fa fa-search pt-1') do
           end
         end
     else
-      content_tag(:div, class: 'session_li mr-4') do
+      content_tag(:div, class: 'session_li mr-2') do
         link_to new_user_session_path do
           'SIGN IN'
         end
       end +
         separator +
-        content_tag(:div, class: 'session_li mr-4') do
+        content_tag(:div, class: 'session_li mr-2') do
           link_to new_user_registration_path do
             'SIGN UP'
           end
         end +
-        content_tag(:div, class: 'session_li mr-4') do
+        content_tag(:div, class: 'session_li mr-2') do
           content_tag(:i, class: 'session_ic fa fa-search pt-1') do
           end
         end
