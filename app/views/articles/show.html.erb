@@ -1,29 +1,33 @@
-<p>
-  <strong>Image</strong>
-  <!-- This line checks if url for attached img exists if it does then it'll render -->
-  <%= image_tag url_for(@article.image) if @article.image.attached? %>
-</p>
+<section class="article_new middle_section pt-1">
+  <div class="article_new_wrapper d-flex flex-column align-items-start mt-4">
+    <p>
+      <strong>Image</strong>
+      <!-- This line checks if url for attached img exists if it does then it'll render -->
+      <%= image_tag url_for(@article.image) if @article.image.attached? %>
+    </p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @article.title %>
-</p>
+    <p>
+      <strong>Title:</strong>
+      <%= @article.title %>
+    </p>
 
-<p>
-  <strong>Category:</strong>
-  <%= @article.category.name %>
-</p>
+    <p>
+      <strong>Category:</strong>
+      <%= @article.category.name %>
+    </p>
 
-<p>
-  <strong>Text:</strong>
-  <%= @article.text %>
-</p>
+    <p>
+      <strong>Text:</strong>
+      <%= @article.text %>
+    </p>
 
-<div class="votes">
-  <%= render partial: 'votes', locals: { article: @article } %>
-</div>
+    <div class="votes">
+      <%= render partial: 'votes', locals: { article: @article } %>
+    </div>
 
-<!-- Remove after nav bar creation-->
-<%= link_to 'Edit', edit_article_path(@article) %> <br>
-<%= link_to 'Back', articles_path %> <br>
-<%= link_to 'Back to Categories', categories_path %> <br>
+    <!-- Remove after nav bar creation-->
+    <%= link_to 'Edit', edit_article_path(@article) %> <br>
+    <%= link_to 'Back', articles_path %> <br>
+    <%= link_to 'Back to Categories', categories_path %> <br>    
+  </div>
+</section>
