@@ -17,6 +17,7 @@
 @import "bootstrap";
 @import "font-awesome";
 @import url('https://fonts.googleapis.com/css2?family=Prata&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Mukta:wght@700;800&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400&display=swap");
 
@@ -61,6 +62,37 @@ $grad_bckg_two: linear-gradient(to bottom, rgba(29, 6, 12, 0.746), rgba(36, 2, 2
   font-family: 'Rubik', sans-serif;
   font-weight: 400;
 }
+
+@mixin playfair-normal {
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+}
+
+@mixin playfair-medium {
+  font-family: 'Playfair Display', serif;
+  font-weight: 500;
+}
+
+@mixin playfair-semi-bold {
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+}
+
+@mixin playfair-bold {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+}
+
+@mixin playfair-extra-bold {
+  font-family: 'Playfair Display', serif;
+  font-weight: 800;
+}
+
+@mixin playfair-black {
+  font-family: 'Playfair Display', serif;
+  font-weight: 900;
+}
+
 
 @mixin article_index_img_containers {
   background-image: $grad_bckg_two;
@@ -608,17 +640,18 @@ footer {
 .article_form {
   width: 100%;
   height: 100%;
-  .article_title,
-  .article_text {
-    @include prata-bolder;
-    font-size: 35px;
-    color: $color_titles;
-    width: 100%;
-  }
-  .article_text {
-    font-size: 25px;
-    height: 830px;
-  }
+}
+
+.article_title,
+.article_text {
+  @include prata-bolder;
+  font-size: 35px;
+  color: $color_titles;
+  width: 100%;
+}
+.article_text {
+  font-size: 25px;
+  height: 830px;
 }
 
 .article_form_style {
@@ -706,6 +739,61 @@ footer {
     font-size: 16px;
     li {
       margin-right: 10px;
+    }
+  }
+
+}
+
+// ARTICLE SHOW
+.article_show {
+  padding-bottom: 5%;
+  height: auto;
+  .article_title,
+  .article_text {
+    color: rgb(19, 19, 19);
+  }
+
+  .article_title,
+  .article_img,
+  .article_text,
+  .below_image,
+  .votes_show {
+    margin: 0 auto;
+    width: 95%;
+  }
+
+  .article_title,
+  .votes_show {
+    margin-top: 5%;
+    margin-bottom: 2%;
+  }
+  .article_img {
+    img {
+      width: 100%;
+    }
+  }
+  .article_text {
+    font-size: 18px;
+    height: 50%;
+  }
+
+  .below_image {
+    font-size: 16px;
+    .edit_show a {
+      text-decoration: none;
+      color: $color_titles;
+      margin-left: 0;
+      font-size: 16px;
+    }
+    .edit_show a:hover {
+      color: $contrast_color;
+    }
+  }
+
+  .votes_show {
+    font-size: 25px;
+    .message {
+      color: $contrast_color;
     }
   }
 
