@@ -1,23 +1,26 @@
-<!-- REMOVE if AFTER NAVBAR CREATION -->
-<% if user_signed_in? %>
-  <h1>Profile for <%= @user.name  %></h1>
-  <h1>Profile for <%= @user.username  %></h1>
-  <h2>Articles written:</h2>
-  <ul>
-    <li>Article 1 Written by <%= @user.username %> goes here</li>
-    <li>Article 2 Written by <%= @user.username %> goes here</li>
-    <li>Article 3 Written by <%= @user.username %> goes here</li>
-    <li>Article 4 Written by <%= @user.username %> goes here</li>
-  </ul>
+<section class="article_new middle_section pt-1">
+  <div class="article_new_wrapper d-flex flex-column align-items-start mt-4">
+    <% if user_signed_in? %>
+      <h3>Profile for: <%= current_user.name  %></h1>
+      <h4>Username <%= current_user.username  %></h1>
+      <h4>Articles written:</h2>
+      <ul>
+        <li>Article 1 Written by <%= @user.username %> goes here</li>
+        <li>Article 2 Written by <%= @user.username %> goes here</li>
+        <li>Article 3 Written by <%= @user.username %> goes here</li>
+        <li>Article 4 Written by <%= @user.username %> goes here</li>
+      </ul>
 
-  <h2>Articles Liked (Voted)</h2>
-  <p>113</p>
-<% else %>
-  <h4>Please Sign In or Sign Up To See This Page</h4>
-  <%= link_to 'Sign In', new_user_session_path  %>
-  <br>
-  <%= link_to 'Sign Up', new_user_registration_path  %>
+      <h2>Articles Liked (Voted)</h2>
+      <p>113</p>
+    <% else %>
+      <h4>Please Sign In or Sign Up To See This Page</h4>
+      <%= link_to 'Sign In', new_user_session_path  %>
+      <br>
+      <%= link_to 'Sign Up', new_user_registration_path  %>
 
-<% end %>
+    <% end %>    
+  </div>
+</section>
 
 

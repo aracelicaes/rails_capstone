@@ -242,7 +242,9 @@ nav {
   background-image: url(estilo_mty.jpg);
   background-color: $color_titles;
   background-repeat: no-repeat;
-  background-position: 0% 84%;
+  background-position: 0% 75%;
+  height: 700px;
+  max-height: 700px;
 
   h2 {
     padding-top: 4%;
