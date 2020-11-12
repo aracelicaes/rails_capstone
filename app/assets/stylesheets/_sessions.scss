@@ -1,0 +1,62 @@
+@import 'helpers';
+
+.session {
+  background-image: url(estilo_mty.jpg);
+  background-color: $color_titles;
+  background-repeat: no-repeat;
+  background-position: 0% 84%;
+  height: 700px;
+  max-height: 900px;
+
+  h2 {
+    padding-top: 4%;
+    overflow-y: hidden;
+    font-size: 35px;
+  }
+
+  h2,
+  form {
+    color: whitesmoke;
+    margin-left: 70%;
+    max-width: 500px;
+  }
+
+  a {
+    color: whitesmoke;
+    font-size: 18px;
+    font-weight: 400;
+    padding-bottom: 2%;
+  }
+
+  form {
+    padding-bottom: 4%;
+
+    div {
+      label {
+        font-size: 20px;
+      }
+
+      input {
+        width: 250px;
+        font-size: 18px;
+      }
+
+      .fixed-width-box {
+        width: 50px !important;
+        align-self: center;
+      }
+
+      .fixed-width {
+        width: 200px !important;
+      }
+
+      .session_button {
+        font-size: 20px;
+        background-color: whitesmoke;
+        color: $color_titles;
+      }
+    }
+  }
+}
+
+@import 'footer';

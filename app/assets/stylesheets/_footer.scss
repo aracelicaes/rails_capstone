@@ -1,0 +1,41 @@
+@import 'helpers';
+
+footer {
+  background-color: $bckg_footer;
+  margin-right: 0 !important;
+  padding-right: 0 !important;
+  margin-left: 0 !important;
+  padding-left: 0 !important;
+  height: 60px;
+  font-size: 14px;
+
+  .logo {
+    color: $soft_white;
+    font-size: 20px;
+  }
+
+  .logo:hover {
+    color: $soft_white;
+  }
+
+  .credits {
+    color: $soft_white;
+  }
+
+  .copyright {
+    color: $contrast_color;
+  }
+
+  .contact p {
+    color: $soft_white;
+  }
+
+  .contact div {
+    margin-top: -5px;
+  }
+
+  .contact a {
+    color: $contrast_color;
+    font-size: 24px;
+  }
+}

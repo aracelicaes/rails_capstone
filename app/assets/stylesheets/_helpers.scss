@@ -1,0 +1,116 @@
+$bckg_nav: #fff;
+$soft_white: rgb(219, 219, 219);
+$nav_li: #6e6788;
+$bckg_footer: #1d080d;
+$contrast_color: #c86502;
+$art_categ: #ac599a;
+$color_titles: #52424d;
+$art_text: rgb(10, 9, 9);
+$bckg_one: rgb(2, 0, 36);
+$grad_bckg_one: linear-gradient(to bottom, rgba(36, 2, 2, 0.061), rgb(29, 6, 12));
+$grad_bckg_two: linear-gradient(to bottom, rgba(29, 6, 12, 0.746), rgba(36, 2, 2, 0.061), rgba(29, 6, 12, 0.876));
+
+@import url('https://fonts.googleapis.com/css2?family=Prata&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400&display=swap");
+
+@mixin mukta-normal {
+  font-weight: normal;
+  font-family: 'Mukta', sans-serif;
+}
+
+@mixin mukta-bold {
+  font-weight: 700;
+  font-family: 'Mukta', sans-serif;
+}
+
+@mixin mukta-bolder {
+  font-weight: 800;
+  font-family: 'Mukta', sans-serif;
+}
+
+@mixin prata-bolder {
+  font-family: 'Prata', serif;
+  font-weight: 700;
+}
+
+@mixin rubik-normal {
+  font-family: 'Rubik', sans-serif;
+  font-weight: 300;
+}
+
+@mixin rubik-bold {
+  font-family: 'Rubik', sans-serif;
+  font-weight: 400;
+}
+
+@mixin playfair-normal {
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+}
+
+@mixin playfair-medium {
+  font-family: 'Playfair Display', serif;
+  font-weight: 500;
+}
+
+@mixin playfair-semi-bold {
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+}
+
+@mixin playfair-bold {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+}
+
+@mixin playfair-extra-bold {
+  font-family: 'Playfair Display', serif;
+  font-weight: 800;
+}
+
+@mixin playfair-black {
+  font-family: 'Playfair Display', serif;
+  font-weight: 900;
+}
+
+@mixin article_index_img_containers {
+  background-image: $grad_bckg_two;
+
+  a {
+    color: $contrast_color;
+
+    @include mukta-bold;
+
+    width: 100%;
+    height: 100%;
+  }
+
+  img {
+    object-fit: cover;
+    object-position: 50% 50%;
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    filter: contrast(120%);
+  }
+}
+
+@mixin link_container_elements {
+  .link_container p {
+    padding-left: 20px;
+  }
+
+  p:first-of-type {
+    font-size: 20px;
+    margin-bottom: 0 !important;
+  }
+
+  p:nth-child(2) {
+    color: $soft_white;
+    font-size: 16px;
+    padding-bottom: 20px;
+  }
+}

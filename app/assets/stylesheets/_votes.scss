@@ -1,0 +1,15 @@
+@import 'helpers';
+
+.votes {
+  .fa-heart {
+    color: rgb(1, 128, 100);
+  }
+
+  .fa-heart-o {
+    color: $art_text;
+  }
+
+  .fa-heart-o:hover {
+    color: rgb(1, 128, 100);
+  }
+}

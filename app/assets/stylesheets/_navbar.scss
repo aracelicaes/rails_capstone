@@ -1,0 +1,37 @@
+@import 'helpers';
+
+nav {
+  background-color: $bckg_nav;
+  margin-right: 0 !important;
+  padding-right: 0 !important;
+  margin-left: 0 !important;
+  padding-left: 0 !important;
+  height: 70px;
+
+  a,
+  .session_li {
+    overflow-y: hidden;
+    color: $nav_li;
+    font-size: 16px;
+
+    @include mukta-normal;
+  }
+
+  .session_ic {
+    color: $nav_li;
+    font-size: 16px;
+  }
+
+  .session_links {
+    overflow-y: hidden;
+  }
+
+  a:hover {
+    text-decoration: none;
+    color: $contrast_color;
+  }
+
+  a:active {
+    color: $contrast_color;
+  }
+}
