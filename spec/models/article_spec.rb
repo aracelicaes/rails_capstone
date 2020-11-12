@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe Article, type: :model do
-
   describe '#Associations' do
     it { should belong_to(:author) }
     it { should belong_to(:category) }
@@ -17,5 +16,4 @@ RSpec.describe Article, type: :model do
     it { should validate_presence_of(:category) }
     it { should validate_presence_of(:image) }
   end
-
 end

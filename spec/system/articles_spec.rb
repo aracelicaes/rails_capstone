@@ -17,10 +17,16 @@ RSpec.describe 'Articles', type: :system do
     driven_by(:rack_test)
   end
 
-  context '#Article Creation' do
+  context '#Failed Article Creation' do
     it "Doesn't Create Article Due To Missing Sign In" do
       visit '/articles/new'
       expect(page).to have_text('You need to sign in or sign up before continuing.')
+    end
+  end
+
+  context '#Succesful Article Creation' do
+    it 'Creates An Article After User Sign Up, Sign In, & Category Creation' do
+      visit '/auth/sign_up'
     end
   end
 end

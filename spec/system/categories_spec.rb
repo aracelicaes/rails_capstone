@@ -13,5 +13,4 @@ require 'rails_helper'
 # sticking to rails and rspec-rails APIs to keep things simple and stable.
 
 RSpec.describe 'Categories', type: :system do
-  
 end
