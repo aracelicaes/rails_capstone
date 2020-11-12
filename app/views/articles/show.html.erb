@@ -19,7 +19,7 @@
       </p>
 
       <div class="edit_show">
-          <%= link_to 'Edit My Article', edit_article_path(@article) if current_user.id == @article.author.id %>
+          <%= article_update(@article) %>
       </div>
 
     </div>
