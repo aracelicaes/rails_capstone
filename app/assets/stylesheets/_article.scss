@@ -162,7 +162,6 @@
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    font-size: 18px;
 
     @include mukta-normal;
 
@@ -176,33 +175,32 @@
 }
 
 .actions {
-  input {
-    padding: 10px 15px;
-  }
+  font-size: 20px;
 
-  input,
-  a {
-    background-color: $bckg_footer;
+  .input_and_a {
     padding: 5px 15px;
     border-radius: 25px;
     color: $soft_white;
 
     @include mukta-normal;
 
-    font-size: 20px;
     width: 155px;
   }
 
-  a {
+  .input_style {
+    background-color: $bckg_footer;
+  }
+
+  .a_style {
     text-align: center;
     background-color: $color_titles;
   }
 
-  input:hover {
+  .input_style:hover {
     background-color: $contrast_color;
   }
 
-  a:hover {
+  .a_style:hover {
     background-color: $nav_li;
   }
 }

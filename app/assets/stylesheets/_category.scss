@@ -151,10 +151,6 @@
   color: $bckg_footer;
 }
 
-.new_category:hover {
-  color: $bckg_footer;
-}
-
 .category_index_wrapper,
 .category_new_edit_wrapper {
   padding-right: 30%;
@@ -186,6 +182,10 @@
   .categ_options a i:hover {
     color: $color_titles;
   }
+}
+
+.new_category:hover {
+  color: $bckg_footer;
 }
 
 @import 'footer';
