@@ -13,15 +13,19 @@
     <% end %>
 
     <div class="field img_field mt-2">
-      <%= form.label :image do %>
-        <i class="fa fa-picture-o" aria-hidden="true"></i> Insert Image
-      <% end %>
+      <div class="article_img">
+        <%= image_tag url_for(@article.image) if @article.image.attached? %>
+      </div>
+      <div class="img_label d-flex flex-column">
+      <%= form.label :image, 'Attach A New Image', class: 'mt-4' %>
       <%= form.file_field :image %>
+      </div>
     </div>
 
     <div class="field category_field mt-2 d-flex flex-column">
-      <%= form.label :Category %>
-      <%= form.collection_select(:category_id, Category.all, :id, :name, {prompt: 'Select Category'}) %>
+      <p class="mt-4">Select Category</p>
+      <%= form.label :category %>
+      <%= form.collection_select(:category_id, Category.all, :id, :name, {prompt: 'Categories'}) %>
     </div>
 
     <div class="field mt-4">
@@ -34,7 +38,7 @@
 
 
     <div class="actions mt-4 mb-4 d-flex">
-      <%= form.submit 'Create Article', class: 'input_and_a input_style'  %>
+      <%= form.submit class: 'input_and_a input_style'  %>
       <%= link_to 'Cancel', articles_path, class: 'input_and_a a_style ml-3' %> 
     </div>
   <% end %>

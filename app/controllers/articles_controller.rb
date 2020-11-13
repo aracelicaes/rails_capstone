@@ -40,7 +40,6 @@ class ArticlesController < ApplicationController
 
   # PATCH/PUT /articles/1
   def update
-    @article = current_user.articles.build(article_params)
     if @article.update(article_params)
       redirect_to @article, notice: 'Article was successfully updated.'
     else
