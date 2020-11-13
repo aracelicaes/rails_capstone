@@ -23,7 +23,7 @@
     </div>
 
     <div class="field category_field mt-2 d-flex flex-column">
-      <p class="mt-4">Select Category</p>
+      <p class="mt-4 select_category_text">Select Category</p>
       <%= form.label :category %>
       <%= form.collection_select(:category_id, Category.all, :id, :name, {prompt: 'Categories'}) %>
     </div>

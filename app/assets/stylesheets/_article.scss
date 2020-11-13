@@ -143,20 +143,20 @@
   }
 }
 
-
 .category_field {
   width: 25%;
 
-  p {
+  .select_category_text {
     color: $color_titles;
     font-size: 20px;
+
     @include mukta_normal;
   }
-  
+
   label {
     display: none;
   }
-  
+
   select {
     border: none;
     background-color: transparent;
@@ -166,9 +166,9 @@
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    
+
     @include mukta-normal;
-    
+
     background-image: url('icons8-down-button-20-maude.png');
     background-repeat: no-repeat;
     background-position: 70% 50%;
@@ -180,30 +180,30 @@
 
 .actions {
   font-size: 20px;
-  
+
   .input_and_a {
     padding: 5px 15px;
     border-radius: 25px;
     color: $soft_white;
-    
+
     @include mukta-normal;
-    
+
     width: 155px;
   }
-  
+
   .input_style {
     background-color: $bckg_footer;
   }
-  
+
   .a_style {
     text-align: center;
     background-color: $color_titles;
   }
-  
+
   .input_style:hover {
     background-color: $contrast_color;
   }
-  
+
   .a_style:hover {
     background-color: $nav_li;
   }
@@ -213,17 +213,17 @@
   position: relative;
   color: rgb(167, 4, 26);
   display: flex;
-  
+
   @include mukta-normal;
-  
+
   background-color: #9d000057;
   border-radius: 5px;
   padding: 10px 0 0 10px;
-  
+
   ul {
     padding-top: 5px;
     font-size: 16px;
-    
+
     li {
       margin-right: 10px;
     }
@@ -237,7 +237,7 @@
   height: 550px;
   filter: opacity(25%);
   border: 4px dashed rgb(98, 98, 98);
-  
+
   img {
     object-fit: cover;
     object-position: 50% 50%;
