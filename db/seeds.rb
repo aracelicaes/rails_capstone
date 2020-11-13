@@ -5,11 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-require 'faker'
 
 Category.destroy_all
 User.destroy_all
-Article.destroy_all
 
 Category.create! ([{
   name: 'Programming',
@@ -54,51 +52,6 @@ User.create! ([{
   password_confirmation: '123456'
 }])
 
-# 3.times do |index|
-#   article = Article.create!(author: User.find_by(username: 'Lola'), 
-#                 title: Faker::Lorem.sentence(word_count: 3),
-#                 text: Faker::Lorem.paragraphs(number: 5),
-#                 category: Category.find_by(priority: 1)
-#   )
-#   article.image.attach(io: File.open('/app/assets/images/'), filename: 'tapatia.jpg')
-#   article.save
-# end
-
-# 3.times do |index|
-#   article = Article.create!(author: User.find_by(username: 'Tony'),
-#                 title: Faker::Lorem.sentence(word_count: 3),
-#                 text: Faker::Lorem.paragraphs(number: 6),
-#                 category: Category.find_by(priority: 2)
-#   )
-#   article.image.attach(io: File.open('/app/assets/images/'), filename: 'biotecnologa.jpg')
-#   article.save
-# end
-
-# 3.times do |index|
-#   Article.create!(author: User.find_by(username: 'Barry'),
-#                 title: Faker::Lorem.sentence(word_count: 3),
-#                 text: Faker::Lorem.paragraphs(number: 6),
-#                 category: Category.find_by(priority: 3)
-# )
-# end
-
-# 3.times do |index|
-#   Article.create!(author: User.find_by(username: 'Lola'),
-#                 title: Faker::Lorem.sentence(word_count: 3),
-#                 text: Faker::Lorem.paragraphs(number: 6),
-#                 category: Category.find_by(priority: 4)
-# )
-# end
-
-# 3.times do |index|
-#   Article.create!(author: User.find_by(username: 'Tony'),
-#                 title: Faker::Lorem.sentence(word_count: 3),
-#                 text: Faker::Lorem.paragraphs(number: 6),
-#                 category: Category.find_by(priority: 5)
-# )
-# end
-
 
 p "Created #{Category.count} categories."
 p "Created #{User.count} users."
-p "Created #{Article.count} articles."

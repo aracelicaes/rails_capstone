@@ -1,11 +1,3 @@
-GIT
-  remote: https://github.com/faker-ruby/faker.git
-  revision: 6ab57e58c78f7c71745b0948b227ce40ad5a3329
-  branch: master
-  specs:
-    faker (2.14.0)
-      i18n (>= 1.6, < 2)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -300,7 +292,6 @@ DEPENDENCIES
   byebug
   capybara (>= 2.15)
   devise
-  faker!
   font-awesome-rails (~> 4.7, >= 4.7.0.5)
   hirb
   listen (~> 3.2)
