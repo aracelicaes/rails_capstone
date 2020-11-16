@@ -1,6 +1,5 @@
 class ArticlesController < ApplicationController
   before_action :set_article, only: %i[show edit update destroy]
-  # before_action :most_votes, only: :index
   before_action :authenticate_user!
   before_action :the_author, only: %i[edit update]
 
@@ -9,9 +8,7 @@ class ArticlesController < ApplicationController
     @articles = Article.all
     @most_voted_article = Article.most_voted.first
     @last_written_article = Article.last
-    # @categories_with_articles = Category.categs_articles_info
     @categories_with_articles = Category.categories_with_articles.limit(4)
-    # @category_latest_article = Article.latest_article(categories)
   end
 
   # GET /articles/1
@@ -28,7 +25,6 @@ class ArticlesController < ApplicationController
   # POST /articles
   def create
     @article = current_user.articles.build(article_params)
-    # @article = Article.new(article_params)
 
     if @article.save
       redirect_to @article, notice: 'Article was successfully created.'
