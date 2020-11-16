@@ -68,7 +68,7 @@ The N + 1 queries were solved with the help of the Bullet Gem, which shows a war
 </code></pre>
 * 🔔 Set up Database <pre><code>rails db:create <br>rails db:migrate <br>rails db:seed</code></pre>
 
-### Usage
+## Usage:
 
 Start server with:
 
@@ -78,7 +78,7 @@ Start server with:
 
 Open `http://localhost:3000/` in your browser.
 
-### Run tests
+## Run tests:
 
 ```
     rpsec
@@ -117,9 +117,12 @@ Open `http://localhost:3000/` in your browser.
 - Linkedin: [Ara Camarillo](www.linkedin.com/in/ara-camarillo)
 
 📄 **Project Link: [Click Here](https://github.com/aracelicaes/rails_capstone)**
+
 <!-- ACKNOWLEDGEMENTS -->
 # Acknowledgements
+
   ## Design Layout
+ [Design Idea By Nelson Sakwa](https://www.behance.net/gallery/14554909/liFEsTlye-Mobile-version)
   
   ## Content Development
   - [Microverse](https://microverse.org)
