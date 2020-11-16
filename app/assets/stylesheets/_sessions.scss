@@ -1,7 +1,7 @@
 @import 'helpers';
 
 .session {
-  background-image: url(estilo_mty.jpg);
+  background-image: asset-url("estilo_mty.jpg");
   background-color: $color_titles;
   background-repeat: no-repeat;
   background-position: 0% 84%;

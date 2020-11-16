@@ -169,7 +169,7 @@
 
     @include mukta-normal;
 
-    background-image: url('icons8-down-button-20-maude.png');
+    background-image: asset-url("icons8-down-button-20-maude.png");
     background-repeat: no-repeat;
     background-position: 70% 50%;
     cursor: pointer;
