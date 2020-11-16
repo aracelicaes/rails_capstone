@@ -1,25 +1,8 @@
-<div align="center">![ERD Diagram](microverse_logo.png)</div>
+<p align="center"><img src="microverse_logo.png" width="200" height="50"></p>
 
 # README
 # Ruby on Rails Capstone: EllaMexicana Magazine
 This is my Rails Capstone Project-Articles: EllaMexicana is an online Magazine that Empowers, Celebrates and Uplifts Mexican women specially those in the Technology and Science fields.
-
-<details>
-<summary>👀 Sneak Peek Of The WebSite!</summary>
-<br>
-Here's A Small Preview Of The Site. :)
-<br><br>
-<pre>
-&lt;<div align="center" width="300" height="200">![ERD Diagram](ella_mexicana_session.png)</div>&gt;
-&lt;<div align="center" width="300" height="200">![ERD Diagram](ella_mexicana_index.png)</div>&gt;
-&lt;<div align="center" width="300" height="200">![ERD Diagram](ella_mexicana_category_show.png)</div>&gt;
-&lt;<div align="center" width="300" height="200">![ERD Diagram](ella_mexicana_article.png)</div>&gt;
-</pre>
-</details>
-
-# Check Out the Live View Of The Website Here!
-
-[EllaMexicana: Empower, Celebrate, and Elevate Mexican Women](https://ellamexicana.herokuapp.com/)
 
 <!-- TABLE OF CONTENTS -->
 ## Table of Contents
@@ -54,6 +37,20 @@ This project demonstrates a User Role system giving the web application and nati
 
 The Seed File inside the database contains the Main 5 Categories showcased in this project, along with 3 Users that can be used to peruse the site and create your own categories and articles. You can still create your own user, password, articles and categories, I just added these for easier accesability.
 
+## 🌟 Check Out the Live Version Here! 🌟
+
+[EllaMexicana: Empower, Celebrate, and Elevate Mexican Women](https://ellamexicana.herokuapp.com/)
+
+## 👀 Sneak Peek Of The WebSite!
+<details>
+<summary>Click Here:</summary>
+<img src="ella_mexicana_session.png" width="600" height="350">
+<img src="ella_mexicana_index.png" width="600" height="350">
+<img src="ella_mexicana_category_show.png" width="600" height="350">
+<img src="ella_mexicana_article.png" width="600" height="350">
+</details>
+
+
 ## Project Extra Feature
 Devise is used to enhance User Sign In/Up and Authentication during User Creation and is the extra feature of this project. It was named as 'Auth' in the routes to avoid confusion in between authentication and user.
 
@@ -86,23 +83,6 @@ Open `http://localhost:3000/` in your browser.
 ```
     rpsec
 ```
-
-## Features:
-<details>
-<summary>Some Of The Features Used In This WebApp:</summary>
-&lt;Ruby 2.7.0&gt;
-&lt;Rubocop&gt;
-&lt;Ruby Gems&gt;
-&lt;Postgresql&gt;
-&lt;Rspec&gt;
-&lt;Capybara&gt;
-&lt;Heroku&gt;
-&lt;AWS S3&gt;
-&lt;Google Fonts&gt;
-&lt;Bootstrap&gt;
-&lt;Font Awesome&gt;
-</pre>
-</details>
 
 ## Features:
 * Ruby 2.7.0
@@ -142,18 +122,6 @@ Open `http://localhost:3000/` in your browser.
   ## Design Layout
   
   ## Content Development
-  <details>
-  <summary>Resources I Used For Content Development:</summary>
-  &lt;[Microverse](https://microverse.org)&gt;
-  &lt;[Best-README-Template](https://github.com/othneildrew/Best-README-Template)&gt;
-  &lt;[Rails Guides](https://guides.rubyonrails.org/)&gt;
-  &lt;[Rails Guides](https://guides.rubyonrails.org/)&gt;
-  &lt;[GoRails](https://gorails.com)&gt;
-  &lt;[RubyGems](https://rubygems.org)&gt;
-  &lt;[StackOverflow](https://stackoverflow.com/)&gt;
-  </details>
-
-  ## Content Development
   - [Microverse](https://microverse.org)
   - [Best-README-Template](https://github.com/othneildrew/Best-README-Template)
   - [Rails Guides](https://guides.rubyonrails.org/)
@@ -163,25 +131,13 @@ Open `http://localhost:3000/` in your browser.
   - [StackOverflow](https://stackoverflow.com/)
 
   ## Images
-  <details>
-  <summary>Photo Stock:</summary>
-  &lt;[Pexels Images: The best free stock photos & videos shared by talented creators.][https://www.pexels.com/collections/em-h2wbchq/]&gt;
-  &lt;[@dercess](https://www.instagram.com/dercess/)&gt;
-  &lt;[@quetzallim](https://www.instagram.com/quetzallim/)&gt;
-  &lt;[@missmariant](https://www.instagram.com/missmariant/)&gt;
-  &lt;[@aldomc.photo](https://www.instagram.com/aldomc.photo/)&gt;
-  &lt;[@hugo.penasco](https://www.instagram.com/hugo.penasco/)&gt;
-  &lt;[@raycardieg](https://www.instagram.com/raycardieg/)&gt;
-  </details>
-
-  ## Images
-    - [Pexels Images: The best free stock photos & videos shared by talented creators.][https://www.pexels.com/collections/em-h2wbchq/]
-    - [@dercess](https://www.instagram.com/dercess/)
-    - [@quetzallim](https://www.instagram.com/quetzallim/)
-    - [@missmariant](https://www.instagram.com/missmariant/)
-    - [@aldomc.photo](https://www.instagram.com/aldomc.photo/)
-    - [@hugo.penasco](https://www.instagram.com/hugo.penasco/)
-    - [@raycardieg](https://www.instagram.com/raycardieg/)
+  - [Pexels Images](https://www.pexels.com/collections/em-h2wbchq/)
+  - [@dercess](https://www.instagram.com/dercess/)
+  - [@quetzallim](https://www.instagram.com/quetzallim/)
+  - [@missmariant](https://www.instagram.com/missmariant/)
+  - [@aldomc.photo](https://www.instagram.com/aldomc.photo/)
+  - [@hugo.penasco](https://www.instagram.com/hugo.penasco/)
+  - [@raycardieg](https://www.instagram.com/raycardieg/)
 
 ## 🤝 Contributing
 
