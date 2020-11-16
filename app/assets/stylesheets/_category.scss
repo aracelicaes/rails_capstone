@@ -38,7 +38,8 @@
 // SHOW
 .middle_section {
   background-image: url("/assets/pattern.png");
-  height: 100%;
+  height: 85vh;
+  max-height: 85vh;
 }
 
 .no_article {
@@ -64,7 +65,8 @@
   .wrapper_details {
     display: flex;
     flex-direction: row;
-    height: 350px;
+    height: 100%;
+    max-height: 100%;
   }
 
   .categ_article_wrapper2,
@@ -90,8 +92,8 @@
     object-fit: cover;
     object-position: 50% 50%;
     filter: contrast(120%);
-    height: 350px;
-    max-height: 350px;
+    height: 100%;
+    max-height: 100%;
   }
 }
 
