@@ -1,6 +1,5 @@
 <p align="center"><img src="microverse_logo.png" width="200" height="50"></p>
 
-# README
 # Ruby on Rails Capstone: EllaMexicana Magazine
 This is my Rails Capstone Project-Articles: EllaMexicana is an online Magazine that Empowers, Celebrates and Uplifts Mexican women specially those in the Technology and Science fields.
 
@@ -155,4 +154,4 @@ Give a ⭐️ if you like this project!
 
 # 📝 License
 
-TBA
+⚖️ MIT LICENSE
