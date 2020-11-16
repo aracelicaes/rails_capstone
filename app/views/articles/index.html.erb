@@ -1,43 +1,50 @@
 <section class="articles_index">
   <div class="top_row_article_index row">
-    <!-- Most Voted Article REMOVE THE BORDER LATER -->
-    <div class="most_voted_article col-9">
-      <%= link_to article_path(@most_voted_article), class: 'most_voted_links' do %>
-        <div class='link_container'>
-          <p><%= @most_voted_article.title %></p>
-          <p><%= @most_voted_article.text.slice!(0..200).concat('...') %></p>
-        </div>
-        <%= image_tag url_for(@most_voted_article.image) if @most_voted_article.image.attached? %>
-      <% end %>
-    </div>
+    <% unless @most_voted_article.nil? %>
+      
+      <div class="most_voted_article col-9">
+        <%= link_to article_path(@most_voted_article), class: 'most_voted_links' do %>
+          <div class='link_container'>
+            <p><%= @most_voted_article.title %></p>
+            <p><%= @most_voted_article.text.slice!(0..200).concat('...') %></p>
+          </div>
+          <%= image_tag url_for(@most_voted_article.image) if @most_voted_article.image.attached? %>
+        <% end %>
+      </div>
+    <% end %>
 
-    <div class="last_article col-3">
-      <%= link_to article_path(@last_written_article) do %>
-        <div class='link_container'>
-          <p><%= @last_written_article.title %></p>
-        </div>
-        <%= image_tag url_for(@last_written_article.image) if @last_written_article.image.attached? %>
-      <% end %>
-    </div>
+    <% unless @last_written_article.nil? %>
+      
+      <div class="last_article col-3">
+        <%= link_to article_path(@last_written_article) do %>
+          <div class='link_container'>
+            <p><%= @last_written_article.title %></p>
+          </div>
+          <%= image_tag url_for(@last_written_article.image) if @last_written_article.image.attached? %>
+        <% end %>
+      </div>
+    <% end %>
   </div>
   
-  <div class="row bottom_row_article_index">
-    <!-- Categories in ascending order of priority with latest article -->    
-      <% @categories_with_articles.each do |e| %>
-        <div class="col-3 categories_with_last_article"> 
-          <div class="category_name">
-            <%= link_to category_path(e) do %>
-              <%= e.name.upcase %>
-            <% end %>
+  <% unless @categories_with_articles.nil? %>
+    <div class="row bottom_row_article_index">
+      <!-- Categories in ascending order of priority with latest article -->    
+        <% @categories_with_articles.each do |e| %>
+          <div class="col-3 categories_with_last_article"> 
+            <div class="category_name">
+              <%= link_to category_path(e) do %>
+                <%= e.name.upcase %>
+              <% end %>
+            </div>
+            <div class="category_last_article">
+              <%= link_to article_path(e.articles.first) do %>
+                <%= e.articles.first.title %>
+                <%= image_tag url_for(e.articles.first.image) if e.articles.first.image.attached? %>
+              <% end %>
+            </div>
           </div>
-          <div class="category_last_article">
-            <%= link_to article_path(e.articles.first) do %>
-              <%= e.articles.first.title %>
-              <%= image_tag url_for(e.articles.first.image) if e.articles.first.image.attached? %>
-            <% end %>
-          </div>
-        </div>
-      <% end %>
-  </div> 
+        <% end %>
+    </div> 
+<% end %>
 
 </section>
