@@ -121,38 +121,38 @@ Open `http://localhost:3000/` in your browser.
 <!-- ACKNOWLEDGEMENTS -->
 # Acknowledgements
 
-  ## Design Layout
- [Design Idea By Nelson Sakwa](https://www.behance.net/gallery/14554909/liFEsTlye-Mobile-version)
-  
-  ## Content Development
-  - [Microverse](https://microverse.org)
-  - [Best-README-Template](https://github.com/othneildrew/Best-README-Template)
-  - [Rails Guides](https://guides.rubyonrails.org/)
-  - [Ruby on Rails: Customize the devise user (Screencast #1)](https://www.youtube.com/watch?v=5inpxIHKhkE)
-  - [GoRails](https://gorails.com)
-  - [RubyGems](https://rubygems.org)
-  - [StackOverflow](https://stackoverflow.com/)
+### Design Layout
+[Design Idea By Nelson Sakwa](https://www.behance.net/gallery/14554909/liFEsTlye-Mobile-version)
 
-  ## Images
-  - [Pexels Images](https://www.pexels.com/collections/em-h2wbchq/)
-  - [@dercess](https://www.instagram.com/dercess/)
-  - [@quetzallim](https://www.instagram.com/quetzallim/)
-  - [@missmariant](https://www.instagram.com/missmariant/)
-  - [@aldomc.photo](https://www.instagram.com/aldomc.photo/)
-  - [@hugo.penasco](https://www.instagram.com/hugo.penasco/)
-  - [@raycardieg](https://www.instagram.com/raycardieg/)
+### Content Development
+- [Microverse](https://microverse.org)
+- [Best-README-Template](https://github.com/othneildrew/Best-README-Template)
+- [Rails Guides](https://guides.rubyonrails.org/)
+- [Ruby on Rails: Customize the devise user (Screencast #1)](https://www.youtube.com/watch?v=5inpxIHKhkE)
+- [GoRails](https://gorails.com)
+- [RubyGems](https://rubygems.org)
+- [StackOverflow](https://stackoverflow.com/)
 
-## 🤝 Contributing
+### Images
+- [Pexels Images](https://www.pexels.com/collections/em-h2wbchq/)
+- [@dercess](https://www.instagram.com/dercess/)
+- [@quetzallim](https://www.instagram.com/quetzallim/)
+- [@missmariant](https://www.instagram.com/missmariant/)
+- [@aldomc.photo](https://www.instagram.com/aldomc.photo/)
+- [@hugo.penasco](https://www.instagram.com/hugo.penasco/)
+- [@raycardieg](https://www.instagram.com/raycardieg/)
+
+# 🤝 Contributing
 
 Contributions, issues and feature requests are welcome!
 
 - Feel free to check the [issues page](issues/https://github.com/aracelicaes/rails_capstone/issues)
 - Or Email Me at: [Ara's Gmail](arace0393@gmail.com)
 
-## Show your support
+# Show your support
 
 Give a ⭐️ if you like this project!
 
-## 📝 License
+# 📝 License
 
 TBA
