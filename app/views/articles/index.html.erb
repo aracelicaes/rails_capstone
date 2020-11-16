@@ -38,7 +38,7 @@
             <div class="category_last_article">
             <% unless e.articles.first.nil? %>
               <%= link_to article_path(e.articles.first) do %>
-                <%= e.articles.first.title %>
+                <p class="bottom_articles_titles"><%= e.articles.first.title %></p>
                 <%= image_tag url_for(e.articles.first.image) if e.articles.first.image.attached? %>
               <% end %>
             <% end %>   
