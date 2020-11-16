@@ -27,8 +27,7 @@
   </div>
   
   <% unless @categories_with_articles.nil? %>
-    <div class="row bottom_row_article_index">
-      <!-- Categories in ascending order of priority with latest article -->    
+    <div class="row bottom_row_article_index">  
         <% @categories_with_articles.each do |e| %>
           <div class="col-3 categories_with_last_article"> 
             <div class="category_name">
@@ -37,10 +36,12 @@
               <% end %>
             </div>
             <div class="category_last_article">
+            <% unless e.articles.first.nil? %>
               <%= link_to article_path(e.articles.first) do %>
                 <%= e.articles.first.title %>
                 <%= image_tag url_for(e.articles.first.image) if e.articles.first.image.attached? %>
               <% end %>
+            <% end %>   
             </div>
           </div>
         <% end %>
