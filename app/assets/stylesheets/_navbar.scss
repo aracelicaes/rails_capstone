@@ -12,18 +12,22 @@ nav {
   .session_li {
     overflow-y: hidden;
     color: $nav_li;
-    font-size: 16px;
+    font-size: 0.9rem;
 
     @include mukta-normal;
   }
 
   .session_ic {
     color: $nav_li;
-    font-size: 16px;
+    font-size: 0.9rem;
   }
 
   .session_links {
     overflow-y: hidden;
+  }
+
+  .s_padding {
+    padding-top:  0.1rem;
   }
 
   a:hover {

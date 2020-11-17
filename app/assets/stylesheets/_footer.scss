@@ -7,11 +7,11 @@ footer {
   margin-left: 0 !important;
   padding-left: 0 !important;
   height: 7vh;
-  font-size: 14px;
+  font-size: 0.8rem;
 
   .logo {
     color: $soft_white;
-    font-size: 20px;
+    font-size: 1.3rem;
   }
 
   .logo:hover {
@@ -22,20 +22,22 @@ footer {
     color: $soft_white;
   }
 
+  .rights,
+  .contact {
+    padding-top: 0.4rem;
+  }
+
   .copyright {
     color: $contrast_color;
   }
 
   .contact p {
     color: $soft_white;
-  }
-
-  .contact div {
-    margin-top: -5px;
+    margin-bottom: 0 !important;
   }
 
   .contact a {
     color: $contrast_color;
-    font-size: 24px;
+    font-size: 1rem;
   }
 }

@@ -23,7 +23,7 @@
 
   a {
     color: whitesmoke;
-    font-size: 18px;
+    font-size: 1.28rem;
     font-weight: 400;
     padding-bottom: 2%;
   }
@@ -33,12 +33,12 @@
 
     div {
       label {
-        font-size: 20px;
+        font-size: 1.42rem;
       }
 
       input {
         width: 250px;
-        font-size: 18px;
+        font-size: 1.28rem;
       }
 
       .fixed-width-box {
@@ -51,7 +51,7 @@
       }
 
       .session_button {
-        font-size: 20px;
+        font-size: 1.42rem;
         background-color: whitesmoke;
         color: $color_titles;
       }

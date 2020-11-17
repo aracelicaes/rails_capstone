@@ -1,51 +1,43 @@
-<section class="articles_index">
-  <div class="top_row_article_index row">
+<div class="article_index">
     <% unless @most_voted_article.nil? %>
-      
-      <div class="most_voted_article col-9">
-        <%= link_to article_path(@most_voted_article), class: 'most_voted_links' do %>
-          <div class='link_container'>
-            <p><%= @most_voted_article.title %></p>
-            <p><%= @most_voted_article.text.slice!(0..200).concat('...') %></p>
-          </div>
-          <%= image_tag url_for(@most_voted_article.image) if @most_voted_article.image.attached? %>
-        <% end %>
-      </div>
+
+      <%= link_to article_path(@most_voted_article), class: 'popular' do %>
+        <%= image_tag url_for(@most_voted_article.image), class: 'content_img' if @most_voted_article.image.attached? %>
+      <% end %>
+      <%= link_to article_path(@most_voted_article), class: 'popular content' do %>
+        <p id="popular_title" class="title"><%= @most_voted_article.title %></p>
+        <p class="text"><%= truncate(@most_voted_article.text, length: 200, omission: '...') %></p>
+      <% end %>
+
     <% end %>
 
     <% unless @last_written_article.nil? %>
+
+      <%= link_to article_path(@last_written_article), class: 'last' do %>
+        <%= image_tag url_for(@last_written_article.image), class: 'content_img' if @last_written_article.image.attached? %>
+      <% end %>
+      <%= link_to article_path(@last_written_article), class: 'last content' do %>
+        <p class="last_title"><%= @last_written_article.title %></p>
+      <% end %>
       
-      <div class="last_article col-3">
-        <%= link_to article_path(@last_written_article) do %>
-          <div class='link_container'>
-            <p><%= @last_written_article.title %></p>
-          </div>
-          <%= image_tag url_for(@last_written_article.image) if @last_written_article.image.attached? %>
+    <% end %>
+  
+  <% unless @categories_with_articles.nil? %>
+    
+    <% @categories_with_articles.each_with_index do |e, i| %>
+      <%= link_to article_path(e.articles.first), class: "categ#{i}" do %>
+        <%= image_tag url_for(e.articles.first.image), class: 'content_img' if e.articles.first.image.attached? %>
+      <% end %>
+      <div class="categ<%= i %>">
+        <%= link_to category_path(e), class: "category" do %>
+          <%= e.name.upcase %>
+        <% end %>
+        <%= link_to article_path(e.articles.first), class: "title content" do %>
+          <%= e.articles.first.title %>
         <% end %>
       </div>
     <% end %>
-  </div>
-  
-  <% unless @categories_with_articles.nil? %>
-    <div class="row bottom_row_article_index">  
-        <% @categories_with_articles.each do |e| %>
-          <div class="col-3 categories_with_last_article"> 
-            <div class="category_name">
-              <%= link_to category_path(e) do %>
-                <%= e.name.upcase %>
-              <% end %>
-            </div>
-            <div class="category_last_article">
-            <% unless e.articles.first.nil? %>
-              <%= link_to article_path(e.articles.first) do %>
-                <p class="bottom_articles_titles"><%= e.articles.first.title %></p>
-                <%= image_tag url_for(e.articles.first.image) if e.articles.first.image.attached? %>
-              <% end %>
-            <% end %>   
-            </div>
-          </div>
-        <% end %>
-    </div> 
+
 <% end %>
 
-</section>
+</div>

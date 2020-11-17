@@ -1,19 +1,24 @@
 $bckg_nav: #fff;
-$soft_white: rgb(219, 219, 219);
+$soft_white: #ececec;
+$soft_white_one: rgb(219, 219, 219);
 $nav_li: #6e6788;
 $bckg_footer: #1d080d;
-$contrast_color: #c86502;
+$contrast_color: #e47201;
+$contrast_color_one: #c86502;
 $art_categ: #ac599a;
 $color_titles: #52424d;
 $art_text: rgb(10, 9, 9);
 $bckg_one: rgb(2, 0, 36);
 $grad_bckg_one: linear-gradient(to bottom, rgba(36, 2, 2, 0.061), rgb(29, 6, 12));
-$grad_bckg_two: linear-gradient(to bottom, rgba(29, 6, 12, 0.746), rgba(36, 2, 2, 0.061), rgba(29, 6, 12, 0.876));
+$grad_bckg_two: linear-gradient(to bottom, rgba(29, 6, 12, 0.746), rgba(36, 2, 2, 0.061), rgb(29, 6, 12));
 
 @import url('https://fonts.googleapis.com/css2?family=Prata&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Mukta:wght@700;800&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400&display=swap");
+
+$layout-breakpoint-large: 990px;
+$layout-breakpoint-largest: 1200px;
 
 @mixin mukta-normal {
   font-weight: normal;
@@ -75,6 +80,11 @@ $grad_bckg_two: linear-gradient(to bottom, rgba(29, 6, 12, 0.746), rgba(36, 2, 2
   font-weight: 900;
 }
 
+@mixin display_grid {
+  display: grid;
+  background-image: $grad_bckg_two;
+}
+
 @mixin article_index_img_containers {
   a {
     color: $contrast_color;
@@ -102,13 +112,17 @@ $grad_bckg_two: linear-gradient(to bottom, rgba(29, 6, 12, 0.746), rgba(36, 2, 2
   }
 
   p:first-of-type {
-    font-size: 20px;
+    font-size: 1rem;
     margin-bottom: 0 !important;
   }
 
   p:nth-child(2) {
     color: $soft_white;
-    font-size: 16px;
-    padding-bottom: 20px;
+    font-size: 1rem;
   }
+}
+
+@mixin content_styles {
+  color: $soft_white;
+  text-decoration: none;
 }
