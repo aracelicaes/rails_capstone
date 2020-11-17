@@ -7,15 +7,19 @@
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 50vh 35vh;
   grid-template-areas: "popular popular popular last" "categ1 categ2 categ3 categ4";
+
   @include mukta-bold;
+
   font-size: 1rem;
 }
 
 .popular {
   @include display_grid;
+
   grid-area: popular;
   display: flex;
   flex-direction: column;
+
   @include content_styles;
 }
 
@@ -31,7 +35,9 @@
 
 .last {
   @include display_grid;
+
   grid-area: last;
+
   @include content_styles;
 }
 
@@ -88,21 +94,25 @@
 
 .categ0 {
   @include display_grid;
+
   grid-area: categ1;
 }
 
 .categ1 {
   @include display_grid;
+
   grid-area: categ2;
 }
 
 .categ2 {
   @include display_grid;
+
   grid-area: categ3;
 }
 
 .categ3 {
   @include display_grid;
+
   grid-area: categ4;
 }
 

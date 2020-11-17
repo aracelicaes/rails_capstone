@@ -27,18 +27,18 @@ module ApplicationHelper
         link_to new_article_path, class: 'd-flex align-items-center is-info mr-3' do
           content_tag(:i, class: 'fa fa-plus pt-1 pr-1') do
           end +
-          content_tag(:small, class: 'pt-1') do
-            'ARTICLE'
-          end
+            content_tag(:small, class: 'pt-1') do
+              'ARTICLE'
+            end
         end
       end +
         content_tag(:div, class: 'session_li pt-1') do
           link_to current_user, class: 'd-flex align-items-center is-info mr-2' do
             content_tag(:i, class: 'fa fa-user pr-1', aria: { hidden: true }) do
             end +
-            content_tag(:small) do
-              current_user.username.upcase
-            end
+              content_tag(:small) do
+                current_user.username.upcase
+              end
           end
         end +
         content_tag(:div, class: 'session_li mr-2 s_padding') do
@@ -68,5 +68,4 @@ module ApplicationHelper
         end
     end
   end
-
 end
