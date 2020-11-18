@@ -19,12 +19,15 @@
   height: 40vw;
   margin: auto;
   border-radius: 10px;
+  grid-gap: 0.5rem;
 }
 
 .comingSoon {
   display: grid;
   grid-area: comingSoon;
   text-align: center;
+  background-color: $soft-white;
+  border-radius: 10px;
 
   h5 {
     @include mukta-bolder;
