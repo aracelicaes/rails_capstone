@@ -116,64 +116,85 @@
   grid-area: categ4;
 }
 
+// Article Errors
+.counted_errors {
+  @include mukta-bold;
+  font-size: 1.2rem;
+}
 // NEW
-.article_new {
-  height: 1400px;
-}
-
-.article_new_wrapper {
-  background-color: rgba(255, 255, 255, 0.931);
-  margin: 0 20%;
-  padding: 2%;
-  height: 92%;
-  max-height: 92%;
-  border-radius: 5px;
-}
-
 .article_form {
-  width: 95%;
+  width: 50vw;
   height: 100%;
-  margin: 0 auto;
+  max-height: 100%;
+  background-color: white;
+  margin: auto;
+  padding: 2rem;
+  border-radius: 10px;
 }
 
-.article_title,
-.article_text {
+.form_image {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 55vh;
+  grid-template-areas: 'fieldImg';
+  border: 2px dotted $nav_li;
+  border-radius: 5px;
+  
+  @include mukta-normal;
+}
+
+.fieldImg {
+  display: grid;
+  grid-area: fieldImg;
+}
+
+.field_img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 50%;
+  filter: opacity(35%);
+  position: absolute;
+  z-index: -1;
+}
+
+.attach_text {
+  color: $contrast_color;
+  font-size: 1.2rem;
+  margin-left: -10%;
+  cursor: pointer;
+}
+
+#article_image {
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.article_form_style {
+  background-color: white;
+  border: none;
   @include prata-bolder;
 
-  font-size: 35px;
   color: $color_titles;
   width: 95%;
 }
 
+.article_title {
+  font-size: 1.5rem;
+}
+
 .article_text {
-  font-size: 1.78rem;
-  height: 34.5vh;
+  font-size: 1.1rem;
+  height: 50vh;
 }
 
-.article_form_style {
-  border: none;
-  background-color: rgba(255, 255, 255, 0.931);
-}
-
-.img_field label {
-  cursor: pointer;
-  font-size: 1.78rem;
-  color: $contrast_color;
-
-  @include mukta-normal;
-
-  i {
-    font-size: 1.42rem;
-    color: rgb(11, 136, 98);
-  }
-}
-
-.category_field {
+.categSelectField{
   width: 25%;
 
-  .select_category_text {
+  .categ_select{
     color: $color_titles;
-    font-size: 1.42rem;
+    font-size: 1.1rem;
+    margin-bottom: 0 !important;
 
     @include mukta_normal;
   }
@@ -185,7 +206,6 @@
   select {
     border: none;
     background-color: transparent;
-    padding: 10px 10px 10px 0;
     margin-left: -5px;
     border-radius: 15px;
     -webkit-appearance: none;
@@ -196,24 +216,25 @@
 
     background-image: url("/assets/icons8-down-button-20-maude.png");
     background-repeat: no-repeat;
-    background-position: 70% 50%;
+    background-position: 100% 50%;
     cursor: pointer;
     color: $color_titles;
-    font-size: 1.42rem;
+    font-size: 1.1rem;
+    width: 10vw;
   }
 }
 
 .actions {
-  font-size: 1.42rem;
+  font-size: 1.1rem;
 
   .input_and_a {
-    padding: 5px 15px;
+    padding: 0.3rem 1rem;
     border-radius: 25px;
     color: $soft_white;
 
     @include mukta-normal;
 
-    width: 155px;
+    width: 14vw;
   }
 
   .input_style {
@@ -234,107 +255,8 @@
   }
 }
 
-#error_explanation {
-  position: relative;
-  color: rgb(167, 4, 26);
-  display: flex;
 
-  @include mukta-normal;
 
-  background-color: #9d000057;
-  border-radius: 5px;
-  padding: 10px 0 0 10px;
 
-  ul {
-    padding-top: 5px;
-    font-size: 0.9rem;
-
-    li {
-      margin-right: 10px;
-    }
-  }
-}
-
-// SHOW
-.article_img {
-  margin: 0 auto;
-  width: 100%;
-  height: 550px;
-  filter: opacity(25%);
-  border: 4px dashed rgb(98, 98, 98);
-
-  img {
-    object-fit: cover;
-    object-position: 50% 50%;
-    height: 100%;
-    width: 100%;
-  }
-}
-
-.article_show_img {
-  filter: none;
-  border: none;
-  width: 95%;
-  margin: 0 auto;
-}
-
-.img_label {
-  position: absolute;
-  top: 20%;
-  left: 45%;
-}
-
-.article_show {
-  padding-bottom: 5%;
-  height: auto;
-
-  .article_title,
-  .article_text {
-    color: rgb(19, 19, 19);
-  }
-
-  .article_title,
-  .article_text,
-  .below_image,
-  .votes_show {
-    margin: 0 auto;
-    width: 95%;
-  }
-
-  .article_title,
-  .votes_show {
-    margin-top: 5%;
-    margin-bottom: 2%;
-  }
-
-  .article_text {
-    font-size: 1.28rem;
-    height: 50%;
-    white-space: pre-wrap;
-  }
-
-  .below_image {
-    font-size: 0.9rem;
-
-    .edit_show a {
-      text-decoration: none;
-      color: $color_titles;
-      margin-left: 0;
-      font-size: 0.9rem;
-    }
-
-    .edit_show a:hover {
-      color: $contrast_color;
-    }
-  }
-
-  .votes_show {
-    font-size: 1.78rem;
-
-    .message {
-      color: $contrast_color;
-    }
-  }
-}
 
 @import 'footer';
