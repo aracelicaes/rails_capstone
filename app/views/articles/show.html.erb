@@ -1,37 +1,37 @@
-<section class="article_new article_show middle_section pt-1">
-  <div class="article_new_wrapper article_show_wrapper d-flex flex-column align-items-start mt-4">
-    <div class="article_img article_show_img">
-      <%= image_tag url_for(@article.image) if @article.image.attached? %>
+<div class="article_new middle_section pt-1 pb-1">
+  <div class="article_form mt-4 mb-4">
+    <div class="form_image article_show_image">
+      <%= image_tag url_for(@article.image), class: 'article_img' if @article.image.attached? %>
     </div>
 
-    <div class="article_title">
-      <%= @article.title %>
-    </div>
-
-    <div class="below_image mb-4">  
-      <p class="category">
-        <strong>Category: </strong>
-        <%= @article.category.name %>
-      </p>
-      <p class="author">
-        <strong>Author: </strong>
-        <%= @article.author.name %>
-      </p>
-
-      <div class="edit_show">
-          <%= article_update(@article) %>
+    <div class="article_form_style">
+      <div class="article_title mt-4">
+        <%= @article.title %>
       </div>
 
-    </div>
+      <div class="below_image mt-4 mb-4">  
+        <p class="the_category">
+          <strong>Category: </strong>
+          <%= @article.category.name %>
+        </p>
+        <p class="author">
+          <strong>Author: </strong>
+          <%= @article.author.name %>
+        </p>
 
-    <div class="article_text">
-      <%= @article.text %>
-    </div>
+        <div class="edit_show">
+            <%= article_update(@article) %>
+        </div>
+      </div>
 
-    <div class="votes_show d-flex">
-    <p class="message mr-4">Show Your Love By Upvoting This Article!</p>
-      <%= render partial: 'votes', locals: { article: @article } %>
-    </div>
+      <div class="article_text">
+        <%= @article.text %>
+      </div>
 
+      <div class="votes_show below_image d-flex">
+        <p class="message mr-2">Show Your Love By Upvoting This Article!</p>
+        <%= render partial: 'votes', locals: { article: @article } %>
+      </div>
+    </div>
   </div>
-</section>
+</div>

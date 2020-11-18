@@ -51,6 +51,7 @@
   padding-right: 1rem;
   padding-left: 1rem;
   text-align: center;
+  justify-content: center;
 }
 
 .content_img {
@@ -68,6 +69,7 @@
   justify-content: flex-end;
   padding-bottom: 1rem;
   padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .category {
@@ -116,7 +118,7 @@
   grid-area: categ4;
 }
 
-// Article Errors
+// ARTICLE ERRORS
 .counted_errors {
   @include mukta-bold;
 
@@ -169,7 +171,7 @@
   @include prata-bolder;
 
   color: $color_titles;
-  width: 95%;
+  width: 100%;
 }
 
 .article_title {
@@ -182,7 +184,7 @@
 }
 
 .categSelectField {
-  width: 25%;
+  width: 15vw;
 
   .categ_select {
     color: $color_titles;
@@ -213,7 +215,24 @@
     cursor: pointer;
     color: $color_titles;
     font-size: 1.1rem;
-    width: 10vw;
+  }
+
+  @media (min-width: $layout-breakpoint-large) {
+    select {
+      width: 10vw;
+    }
+  }
+  
+  @media (min-width: $layout-breakpoint-largest) {
+    select {
+      width: 12vw;
+    }
+  }
+  
+  @media (min-width: $layout-breakpoint-extra-large) {
+    select {
+      width: 10vw;
+    }
   }
 }
 
@@ -227,7 +246,7 @@
 
     @include mukta-normal;
 
-    width: 14vw;
+    width: 15vw;
   }
 
   .input_style {
@@ -245,6 +264,41 @@
 
   .a_style:hover {
     background-color: $nav_li;
+  }
+}
+
+// ARTICLE SHOW
+.article_show_image {
+  border: none;
+}
+
+.article_img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 54%;
+  border-radius: 10px;
+}
+
+.below_image {
+  @include mukta-normal;
+  width: 100%;
+}
+
+.edit_show a {
+  color: $color_titles;
+  font-size: 0.8rem;
+}
+
+.edit_show a:hover {
+  color: $contrast_color;
+}
+
+.votes_show {
+  font-size: 1.2rem;
+
+  .message {
+    color: $contrast_color;
   }
 }
 

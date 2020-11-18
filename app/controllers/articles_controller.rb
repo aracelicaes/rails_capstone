@@ -12,7 +12,9 @@ class ArticlesController < ApplicationController
   end
 
   # GET /articles/1
-  def show; end
+  def show
+    @categories_with_articles = Category.categories_with_articles.limit(4)
+  end
 
   # GET /articles/new
   def new
