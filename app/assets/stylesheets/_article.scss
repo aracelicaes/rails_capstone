@@ -222,13 +222,13 @@
       width: 10vw;
     }
   }
-  
+
   @media (min-width: $layout-breakpoint-largest) {
     select {
       width: 12vw;
     }
   }
-  
+
   @media (min-width: $layout-breakpoint-extra-large) {
     select {
       width: 10vw;
@@ -282,6 +282,7 @@
 
 .below_image {
   @include mukta-normal;
+
   width: 100%;
 }
 
