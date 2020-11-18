@@ -5,62 +5,45 @@
 }
 
 .theUser {
-  width: 80vw;
-  height: 75vh;
+  width: 50vw;
+  height: 80vh;
+  margin: 2rem auto;
+}
+
+.user {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 10vh 55vh;
+  grid-template-areas: 'comingSoon''ellaAmalia';
+  width: 30vw;
+  height: 40vw;
   margin: auto;
+  border-radius: 10px;
 }
 
-.type {
-  color: $contrast_color;
-  font-size: 1.8rem;
-}
-
-.profile {
+.comingSoon {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  grid-template-areas: 'accountInfo written' 'upvoted written';
-  padding: 2rem;
-  grid-gap: 2rem;
+  grid-area: comingSoon;
+  text-align: center;
 
-  @include mukta-normal;
-}
+  h5 {
+    @include mukta-bolder;
 
-.accountInfo {
-  display: grid;
-  grid-area: accountInfo;
-  border: 2px solid $nav_li;
-  background-color: white;
-  border-radius: 15px;
-}
-
-.upvoted {
-  display: grid;
-  grid-area: upvoted;
-  border: 2px solid $nav_li;
-  background-color: white;
-  border-radius: 15px;
-
-  .counted {
-    text-align: center;
-    font-size: 1.5rem;
+    color: $contrast_color;
+    font-size: 1.8rem;
   }
 }
 
-.written {
+.ellaAmalia {
   display: grid;
-  grid-area: written;
-  border: 2px solid $nav_li;
-  background-color: white;
-  border-radius: 15px;
-  padding-top: 1rem;
+  grid-area: ellaAmalia;
+  background-image: url("/assets/amaliahernandez.jpg");
+  background-size: cover;
+  background-color: $color_titles;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  border-radius: 10px;
 }
 
-.user_articles_list {
-  li {
-    list-style-type: circle;
-    margin-bottom: 0.8rem;
-  }
-}
 
 @import 'footer';

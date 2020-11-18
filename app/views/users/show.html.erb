@@ -1,30 +1,13 @@
 <section class="article_new middle_section user_show pt-1 pb-1">
   <div class="theUser mt-4 mb-4">
     <% if user_signed_in? %>
-      <div class="profile">
-      
-        <div class="accountInfo d-flex flex-column justify-content-center align-items-center">
-          <h4 class="type">Profile Info:</h4>
-          <h5>Username: <%= current_user.username  %></h5>
-          <h5>Email: <%= current_user.email  %></h5>
-          <h5>Name: <%= current_user.name  %></h5>
+      <div class="user">
+        <div class="comingSoon d-flex align-items-center justify-content-center">
+          <h5>🚧 COMING SOON! 🚧</h5>
         </div>
-        
-        <div class="upvoted d-flex flex-column justify-content-center align-items-center">
-          <h4 class="type">Upvoted Articles</h4>
-          <p class="counted">113</p>
+        <div class="ellaAmalia">
         </div>
-
-        <div class="written d-flex flex-column justify-content-center align-items-center">
-          <h4 class="type">Articles Written:</h2>
-          <ul class="user_articles_list">
-            <li>Why Women Were Always Meant To Be Programmers.</li>
-            <li>Why Young Girls Should Learn How To Code.</li>
-            <li>Top 5 Online Communitites for Latina Programmers.</li>
-            <li>Programming: The Best Option for Digital Nomads?</li>
-          </ul>
-        </div>
-      </div>
+    </div>
 
     <% else %>
       <h4>Please Sign In or Sign Up To See This Page</h4>
