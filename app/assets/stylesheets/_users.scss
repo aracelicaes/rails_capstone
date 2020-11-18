@@ -1,0 +1,65 @@
+@import 'helpers';
+
+.user_show {
+  height: 85vh;
+}
+
+.theUser {
+  width: 50vw;
+  height: 75vh;
+  margin: auto;
+}
+
+.type {
+  color: $contrast_color;
+  font-size: 1.8rem;
+}
+
+.profile {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: 'accountInfo upvoted' 'written written';
+  padding: 2rem;
+  grid-gap: 2rem;
+
+  @include mukta-normal;
+}
+
+.accountInfo {
+  display: grid;
+  grid-area: accountInfo;
+  border: 2px solid $nav_li;
+  background-color: white;
+  border-radius: 15px;
+}
+
+.upvoted {
+  display: grid;
+  grid-area: upvoted;
+  border: 2px solid $nav_li;
+  background-color: white;
+  border-radius: 15px;
+  .counted {
+    text-align: center;
+    font-size: 1.5rem;
+  }
+}
+
+.written {
+  display: grid;
+  grid-area: written;
+  border: 2px solid $nav_li;
+  background-color: white;
+  border-radius: 15px;
+  padding-top: 1rem;
+}
+
+.user_articles_list {
+  li {
+    list-style-type: circle;
+    margin-bottom: 0.8rem;
+  }
+}
+
+@import 'footer';

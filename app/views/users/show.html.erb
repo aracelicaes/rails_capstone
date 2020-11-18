@@ -1,18 +1,31 @@
-<section class="article_new middle_section pt-1">
-  <div class="article_new_wrapper d-flex flex-column align-items-start mt-4">
+<section class="article_new middle_section user_show pt-1 pb-1">
+  <div class="theUser mt-4 mb-4">
     <% if user_signed_in? %>
-      <h3>Profile for: <%= current_user.name  %></h1>
-      <h4>Username <%= current_user.username  %></h1>
-      <h4>Articles written:</h2>
-      <ul>
-        <li>Article 1 Written by <%= @user.username %> goes here</li>
-        <li>Article 2 Written by <%= @user.username %> goes here</li>
-        <li>Article 3 Written by <%= @user.username %> goes here</li>
-        <li>Article 4 Written by <%= @user.username %> goes here</li>
-      </ul>
+      <div class="profile">
+      
+        <div class="accountInfo d-flex flex-column justify-content-center align-items-center">
+          <h4 class="type">Profile Info:</h4>
+          <h5>Username: <%= current_user.username  %></h5>
+          <h5>Email: <%= current_user.email  %></h5>
+          <h5>Name: <%= current_user.name  %></h5>
+        </div>
+        
+        <div class="upvoted d-flex flex-column justify-content-center align-items-center">
+          <h4 class="type">Upvoted Articles</h4>
+          <p class="counted">113</p>
+        </div>
 
-      <h2>Articles Liked (Voted)</h2>
-      <p>113</p>
+        <div class="written d-flex flex-column justify-content-center align-items-center">
+          <h4 class="type">Articles Written:</h2>
+          <ul class="user_articles_list">
+            <li>Why Women Were Always Meant To Be Programmers.</li>
+            <li>Why Young Girls Should Learn How To Code.</li>
+            <li>Top 5 Online Communitites for Latina Programmers.</li>
+            <li>Programming: The Best Option for Digital Nomads?</li>
+          </ul>
+        </div>
+      </div>
+
     <% else %>
       <h4>Please Sign In or Sign Up To See This Page</h4>
       <%= link_to 'Sign In', new_user_session_path  %>
