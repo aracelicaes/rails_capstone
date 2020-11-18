@@ -4,9 +4,10 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 7.5vh;
-  grid-template-areas: "footerLogo links links footerLi";
+  grid-template-areas: "footerLogo privacyLi privacyLi footerLi";
   background-color: $bckg_footer;
-  padding: 0rem 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
   color: $nav_li;
   font-size: 0.9rem;
 
@@ -16,23 +17,20 @@
 .footerLogo {
   display: grid;
   grid-area: footerLogo;
-  display: flex;
-  align-items: center;
+
   @include prata-bolder;
+
   font-size: 1.2rem;
   color: $soft_white;
 }
 
-.footerLogo:hover {
-  color: $soft_white;
+.privacyLi {
+  display: grid;
+  grid-area: privacyLi;
 }
 
-.links {
-  display: grid;
-  grid-area: links;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.footerLogo:hover {
+  color: $soft_white;
 }
 
 .privacy,
@@ -56,11 +54,8 @@
 .footerLi {
   display: grid;
   grid-area: footerLi;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
   padding-right: 1rem;
-  
+
   span {
     color: $soft_white;
   }
@@ -70,12 +65,6 @@
   padding-right: 0.8rem;
   color: $contrast_color;
   font-size: 1.2rem;
-}
-
-.privacy_li {
-  display: flex;
-  justify-content: flex-start;
-  padding-left: 2rem;
 }
 
 .footer_icons {

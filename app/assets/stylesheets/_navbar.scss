@@ -6,7 +6,8 @@
   grid-template-rows: 7.5vh;
   grid-template-areas: "logo links links sessionLi";
   background-color: $bckg_nav;
-  padding: 0rem 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
   color: $nav_li;
   font-size: 1rem;
 
@@ -16,9 +17,8 @@
 .logo {
   display: grid;
   grid-area: logo;
-  display: flex;
-  align-items: center;
   color: $color_titles;
+
   @include prata-bolder;
 
   font-size: 1.8rem;
@@ -31,9 +31,6 @@
 .links {
   display: grid;
   grid-area: links;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .sessionLi {
