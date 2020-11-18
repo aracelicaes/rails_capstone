@@ -119,6 +119,7 @@
 // Article Errors
 .counted_errors {
   @include mukta-bold;
+
   font-size: 1.2rem;
 }
 
@@ -140,7 +141,7 @@
   grid-template-areas: 'fieldImg';
   border: 2px dotted $nav_li;
   border-radius: 5px;
-  
+
   @include mukta-normal;
 }
 
@@ -164,6 +165,7 @@
 .article_form_style {
   background-color: white;
   border: none;
+
   @include prata-bolder;
 
   color: $color_titles;
@@ -179,10 +181,10 @@
   height: 50vh;
 }
 
-.categSelectField{
+.categSelectField {
   width: 25%;
 
-  .categ_select{
+  .categ_select {
     color: $color_titles;
     font-size: 1.1rem;
     margin-bottom: 0 !important;
@@ -245,9 +247,5 @@
     background-color: $nav_li;
   }
 }
-
-
-
-
 
 @import 'footer';
