@@ -11,4 +11,8 @@ class Category < ApplicationRecord
 
   scope :ordered_categs, -> { order(priority: :asc) }
   scope :categories_with_articles, -> { ordered_categs.includes(articles: [image_attachment: :blob]) }
+
+  def first_article
+    articles.first
+  end
 end

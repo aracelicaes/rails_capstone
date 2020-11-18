@@ -14,12 +14,13 @@
 
     <div class="field d-flex flex-column mt-2">
       <%= form.label :name %>
-      <%= form.text_field :name %>
+      <%= form.text_field :name, placeholder: 'ie. Technology' %>
     </div>
 
     <div class="field d-flex flex-column mt-4">
       <%= form.label :priority %>
-      <%= form.number_field :priority %>
+      <%= category_priority %>
+      <%= form.number_field :priority, placeholder: 'Insert A Number' %>
     </div>
 
     <div class="actions mt-4 mb-2">

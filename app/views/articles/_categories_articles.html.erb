@@ -1,0 +1,20 @@
+<% unless @categories_with_articles.nil? %>
+    
+    <% @categories_with_articles.each_with_index do |e, i| %>
+      
+      <% unless e.first_article.nil? %>
+      
+        <%= link_to article_path(e.first_article), class: "categ#{i}" do %>
+          <%= image_tag url_for(e.first_article.image), class: 'content_img' if e.first_article.image.attached? %>
+        <% end %>
+        <div class="categ<%= i %>">
+          <%= link_to category_path(e), class: "category" do %>
+            <%= e.name.upcase %>
+          <% end %>
+          <%= link_to article_path(e.first_article), class: "title content" do %>
+            <%= e.first_article.title %>
+          <% end %>
+        </div>
+      <% end %>
+    <% end %>
+  <% end %>

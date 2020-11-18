@@ -27,10 +27,32 @@
   @include content_styles;
 }
 
-#popular_title {
-  color: $contrast_color;
-  font-size: 1.1rem;
-  margin-bottom: 0;
+.popular_a,
+.last_a {
+  width: 100%;
+  height: 100%;
+}
+
+.pop_title {
+  color: $contrast_color !important;
+  font-size: 1.1rem !important;
+  margin-bottom: 0.5rem !important;
+}
+
+.text {
+  color: $soft_white;
+}
+
+.text:hover {
+  color: $soft_white;
+}
+
+.popular_title {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
 .last {
@@ -46,12 +68,23 @@
 }
 
 .last_title {
+  width: 100%;
+  height: 100%;
   display: flex;
-  align-items: center;
+  justify-content: center;
+}
+
+.last_title_text {
+  display: flex;
+  align-items: end;
+  text-align: center;
   padding-right: 1rem;
   padding-left: 1rem;
-  text-align: center;
-  justify-content: center;
+  color: $soft_white;
+}
+
+.last_title_text:hover {
+  color: $soft_white;
 }
 
 .content_img {
