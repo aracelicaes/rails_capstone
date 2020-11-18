@@ -13,9 +13,6 @@
     <% end %>
 
     <div class="field form_image mt-2">
-      <div class="fieldImg">
-        <%= image_tag url_for(@article.image), class: 'field_img' if @article.image.attached? %>
-      </div>
       <div class="fieldImg d-flex flex-column justify-content-center align-items-center">
         <%= form.label :image, 'Attach A New Image', class: 'attach_text' %>
         <%= form.file_field :image, class: 'attach_field' %>
