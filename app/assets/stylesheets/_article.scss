@@ -48,8 +48,8 @@
 .last_title {
   display: flex;
   align-items: center;
-  padding-right: 2rem;
-  padding-left: 2rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
   text-align: center;
 }
 
@@ -67,12 +67,12 @@
   flex-direction: column;
   justify-content: flex-end;
   padding-bottom: 1rem;
-  padding-left: 2rem;
+  padding-left: 1rem;
 }
 
 .category {
-  padding-left: 2rem;
-  padding-top: 2rem;
+  padding-left: 1rem;
+  padding-top: 1rem;
   color: $soft_white;
   text-decoration: underline;
   text-decoration-color: rgb(255, 123, 0);

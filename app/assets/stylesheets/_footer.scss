@@ -1,43 +1,85 @@
 @import 'helpers';
 
-footer {
+.footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 7.5vh;
+  grid-template-areas: "footerLogo links links footerLi";
   background-color: $bckg_footer;
-  margin-right: 0 !important;
-  padding-right: 0 !important;
-  margin-left: 0 !important;
-  padding-left: 0 !important;
-  height: 7vh;
-  font-size: 0.8rem;
+  padding: 0rem 1rem;
+  color: $nav_li;
+  font-size: 0.9rem;
 
-  .logo {
+  @include mukta-normal;
+}
+
+.footerLogo {
+  display: grid;
+  grid-area: footerLogo;
+  display: flex;
+  align-items: center;
+  @include prata-bolder;
+  font-size: 1.2rem;
+  color: $soft_white;
+}
+
+.footerLogo:hover {
+  color: $soft_white;
+}
+
+.links {
+  display: grid;
+  grid-area: links;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.privacy,
+.madeBy {
+  color: $contrast_color;
+}
+
+.privacy:hover,
+.madeBy:hover {
+  color: $contrast_color;
+}
+
+.copyright {
+  color: $soft_white;
+}
+
+.copyright:hover {
+  color: $soft_white;
+}
+
+.footerLi {
+  display: grid;
+  grid-area: footerLi;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 1rem;
+  
+  span {
     color: $soft_white;
-    font-size: 1.3rem;
   }
+}
 
-  .logo:hover {
-    color: $soft_white;
-  }
+.f_icon {
+  padding-right: 0.8rem;
+  color: $contrast_color;
+  font-size: 1.2rem;
+}
 
-  .credits {
-    color: $soft_white;
-  }
+.privacy_li {
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 2rem;
+}
 
-  .rights,
-  .contact {
-    padding-top: 0.4rem;
-  }
-
-  .copyright {
-    color: $contrast_color;
-  }
-
-  .contact p {
-    color: $soft_white;
-    margin-bottom: 0 !important;
-  }
-
-  .contact a {
-    color: $contrast_color;
-    font-size: 1rem;
-  }
+.footer_icons {
+  display: flex;
+  align-items: center;
+  padding-left: 1rem;
 }

@@ -20,7 +20,7 @@
                 <div class="categ_article_title_text d-flex flex-column">
                   <%= link_to article_path(e) do %>
                     <div><%= e.title %></div>
-                    <p><%= truncate(e.text, length: 300, omission: '...(continue reading)') %></p>
+                    <p><%= truncate(e.text, length: 200, omission: '...(continue reading)') %></p>
                   <% end %>
                 </div>
                 <div class="categ_articles_votes">

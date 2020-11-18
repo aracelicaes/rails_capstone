@@ -1,41 +1,70 @@
 @import 'helpers';
 
-nav {
+.navbar {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 7.5vh;
+  grid-template-areas: "logo links links sessionLi";
   background-color: $bckg_nav;
-  margin-right: 0 !important;
-  padding-right: 0 !important;
-  margin-left: 0 !important;
-  padding-left: 0 !important;
-  height: 8vh;
+  padding: 0rem 1rem;
+  color: $nav_li;
+  font-size: 1rem;
 
-  a,
-  .session_li {
-    overflow-y: hidden;
-    color: $nav_li;
-    font-size: 0.9rem;
+  @include mukta-normal;
+}
 
-    @include mukta-normal;
-  }
+.logo {
+  display: grid;
+  grid-area: logo;
+  display: flex;
+  align-items: center;
+  color: $color_titles;
+  @include prata-bolder;
 
-  .session_ic {
-    color: $nav_li;
-    font-size: 0.9rem;
-  }
+  font-size: 1.8rem;
+}
 
-  .session_links {
-    overflow-y: hidden;
-  }
+.logo:hover {
+  color: $color_titles;
+}
 
-  .s_padding {
-    padding-top: 0.1rem;
-  }
+.links {
+  display: grid;
+  grid-area: links;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-  a:hover {
-    text-decoration: none;
-    color: $contrast_color;
-  }
+.sessionLi {
+  display: grid;
+  grid-area: sessionLi;
+}
 
-  a:active {
-    color: $contrast_color;
-  }
+.session_li {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.link {
+  padding: 0 0.4rem;
+  color: $nav_li;
+}
+
+.link:hover {
+  color: $contrast_color;
+}
+
+.link_icon {
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  padding-right: 4px;
+}
+
+.signOut {
+  font-size: 1.1rem;
 }
