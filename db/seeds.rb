@@ -22,7 +22,7 @@ Category.create! ([{
   priority: 3
 },
 {
-  name: 'Art & Culture',
+  name: 'Culture',
   priority: 4
 },
 {
