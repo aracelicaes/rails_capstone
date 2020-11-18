@@ -52,14 +52,14 @@ module ApplicationHelper
         content_tag(:i, class: 'search fa fa-search') do
         end
     else
-      content_tag(:div, class: 'session_li link') do
-        link_to new_user_session_path do
+      content_tag(:div) do
+        link_to new_user_session_path, class: 'link' do
           'SIGN IN'
         end
       end +
         separator +
-        content_tag(:div, class: 'session_li link') do
-          link_to new_user_registration_path do
+        content_tag(:div) do
+          link_to new_user_registration_path, class: 'link' do
             'SIGN UP'
           end
         end +

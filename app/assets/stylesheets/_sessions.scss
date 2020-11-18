@@ -1,60 +1,67 @@
 @import 'helpers';
 
-.session {
+.sessionForm {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 85vh;
+  grid-template-areas: 'regia regia regia theForm theForm';
+}
+
+.regia {
+  display: grid;
+  grid-area: regia;
   background-image: url("/assets/estilo_mty.jpg");
   background-color: $color_titles;
   background-repeat: no-repeat;
   background-position: 0% 84%;
   height: 85vh;
-  max-height: 85vh;
+}
+
+.theForm {
+  display: grid;
+  grid-area: theForm;
+  padding: 2rem;
+  background-color: $color_titles;
+  color: whitesmoke;
 
   h2 {
-    padding-top: 4%;
-    overflow-y: hidden;
-    font-size: 35px;
-  }
-
-  h2,
-  form {
-    color: whitesmoke;
-    margin-left: 70%;
-    max-width: 500px;
+    font-size: 1.9rem;
+    margin-left: -3.5rem;
   }
 
   a {
     color: whitesmoke;
-    font-size: 1.28rem;
+    font-size: 1.2rem;
     font-weight: 400;
-    padding-bottom: 2%;
   }
+}
 
-  form {
-    padding-bottom: 4%;
+form {
+  div {
+    label {
+      font-size: 1.2rem;
+    }
 
-    div {
-      label {
-        font-size: 1.42rem;
-      }
+    input {
+      width: 20vw;
+      font-size: 1rem;
+      border-radius: 10px;
+    }
 
-      input {
-        width: 250px;
-        font-size: 1.28rem;
-      }
+    .fixed-width-box {
+      width: 2vw !important;
+      align-self: center;
+    }
 
-      .fixed-width-box {
-        width: 50px !important;
-        align-self: center;
-      }
+    .fixed-width {
+      width: 20vw !important;
+    }
 
-      .fixed-width {
-        width: 200px !important;
-      }
-
-      .session_button {
-        font-size: 1.42rem;
-        background-color: whitesmoke;
-        color: $color_titles;
-      }
+    .session_button {
+      font-size: 1rem;
+      background-color: whitesmoke;
+      color: $color_titles;
+      border-radius: 25px;
     }
   }
 }
