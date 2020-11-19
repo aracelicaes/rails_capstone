@@ -2,7 +2,7 @@ module CategoriesHelper
   def category_priority
     if @last_category
       content_tag(:em, class: 'mb-2') do
-        "(Insert a unique Priority number greater than #{@last_category})"
+        "(Insert a Priority number greater than #{@last_category})"
       end
     else
       content_tag(:em, class: 'mb-2') do
