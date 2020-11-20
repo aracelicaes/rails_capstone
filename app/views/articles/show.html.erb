@@ -1,0 +1,37 @@
+<div class="article_new show middle_section pt-1 pb-1">
+  <div class=" article_show mt-4 mb-4">
+    <div class="article_show_image">
+      <%= image_tag url_for(@article.image), class: 'article_img' if @article.image.attached? %>
+    </div>
+
+    <div class="article_show_style">
+      <div class="article_title_show mt-4">
+        <%= @article.title %>
+      </div>
+
+      <div class="below_image mt-4 mb-4">  
+        <p class="the_category">
+          <strong>Category: </strong>
+          <%= @article.category.name %>
+        </p>
+        <p class="author">
+          <strong>Author: </strong>
+          <%= @article.author.name %>
+        </p>
+
+        <div class="edit_show">
+            <%= article_update(@article) %>
+        </div>
+      </div>
+
+      <div class="article_text">
+        <p class="inside_article_text"><%= @article.text %><p>
+      </div>
+
+      <div class="votes_show below_image d-flex">
+        <p class="message mr-2">Show Your Love By Upvoting This Article!</p>
+        <%= render partial: 'votes', locals: { article: @article } %>
+      </div>
+    </div>
+  </div>
+</div>

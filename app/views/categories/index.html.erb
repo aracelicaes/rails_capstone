@@ -1,0 +1,19 @@
+<section class="category_index middle_section">
+  <div class="section_header pt-4">
+    <h1>All Categories</h1>
+  </div>
+
+  <div class="category_index_wrapper d-flex flex-wrap mt-4">
+    <% @categories.each do |category| %>
+      <div class="categories_wrapper d-flex justify-content-center">
+        <div class="categ_name mr-4">
+          <%= link_to category.name, category %>
+        </div>
+      </div>
+    <% end %>
+    <%= link_to new_category_path, class: 'new_category d-flex justify-content-center' do %>
+      New Category
+      <i class="fa fa-plus ml-2" aria-hidden="true"></i>
+    <% end %>
+  </div>
+</section>

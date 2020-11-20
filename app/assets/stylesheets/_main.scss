@@ -1,0 +1,74 @@
+@import 'helpers';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+@media (min-width: $layout-breakpoint-large) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: $layout-breakpoint-largest) {
+  html {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: $layout-breakpoint-extra-large) {
+  html {
+    font-size: 20px;
+  }
+}
+
+html {
+  max-width: 100%;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body {
+  background: #fff;
+  position: relative;
+
+  @include rubik-normal;
+
+  margin-right: 0;
+  margin-left: 0;
+}
+
+h2,
+h3 {
+  @include mukta-bold;
+
+  overflow-y: hidden;
+}
+
+h4,
+h5,
+h6 {
+  @include rubik-bold;
+
+  overflow-y: hidden;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+img {
+  filter: greyscale(20%);
+}

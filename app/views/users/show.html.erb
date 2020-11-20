@@ -1,0 +1,22 @@
+<section class="article_new middle_section user_show pt-1 pb-1">
+  <div class="theUser mt-4 mb-4">
+    <% if user_signed_in? %>
+      <div class="user">
+        <div class="comingSoon d-flex align-items-center justify-content-center">
+          <h5>🚧 COMING SOON! 🚧</h5>
+        </div>
+        <div class="ellaAmalia">
+        </div>
+    </div>
+
+    <% else %>
+      <h4>Please Sign In or Sign Up To See This Page</h4>
+      <%= link_to 'Sign In', new_user_session_path  %>
+      <br>
+      <%= link_to 'Sign Up', new_user_registration_path  %>
+
+    <% end %>    
+  </div>
+</section>
+
+

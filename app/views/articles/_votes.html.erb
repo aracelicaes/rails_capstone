@@ -1,0 +1,21 @@
+<div class="votes d-flex">
+  <% if user_signed_in? && current_user.votes?(article) %>
+    
+    <div class="downvote">
+      <%= link_to article_vote_path(article), method: :delete do %>
+        <i class="fa fa-heart mr-2" aria-hidden="true"></i>
+      <% end %>
+    </div>
+
+  <% else %>
+    <div class="upvote">
+      <%= link_to article_vote_path(article), method: :post, local: true do %>
+        <i class="fa fa-heart-o mr-2" aria-hidden="true"></i>
+      <% end %>
+    </div>
+  <% end %>
+
+  <div class="votes_count">
+    <%= article.votes.count %>
+  </div>
+</div>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>RailsCapstone</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <nav class="navbar pb-0 pt-0">      
+      <%= link_to 'EllaMexicana', root_path, class: "logo d-flex align-items-center" %>
+      
+      <div class="links d-flex justify-content-center align-items-center" >
+          <%= link_to 'HOME', root_path, class: 'home link'%>
+          <%= categories_nav_links %>
+          <%= link_to 'MORE', categories_path, class: 'more link' %>
+      </div>
+
+      <div class="sessionLi session_li">
+       <%= session_links %>
+      </div>
+    </nav>
+    
+    <% if notice %><p class="alert alert-info"><%= notice %></p><% end %>
+    <% if alert %><p class="alert alert-warning"><%= alert %></p><% end %>
+    
+    <%= yield %>
+
+    <%= render "layouts/footer" %>
+ 
+  </body>
+</html>

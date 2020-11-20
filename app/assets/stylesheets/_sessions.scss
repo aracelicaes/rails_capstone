@@ -1,0 +1,69 @@
+@import 'helpers';
+
+.sessionForm {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 85vh;
+  grid-template-areas: 'regia regia regia theForm theForm';
+}
+
+.regia {
+  display: grid;
+  grid-area: regia;
+  background-image: url("/assets/estilo_mty.jpg");
+  background-color: $color_titles;
+  background-repeat: no-repeat;
+  background-position: 0% 84%;
+  height: 85vh;
+}
+
+.theForm {
+  display: grid;
+  grid-area: theForm;
+  padding: 2rem;
+  background-color: $color_titles;
+  color: whitesmoke;
+
+  h2 {
+    font-size: 1.9rem;
+    margin-left: -3.5rem;
+  }
+
+  a {
+    color: whitesmoke;
+    font-size: 1.2rem;
+    font-weight: 400;
+  }
+}
+
+form {
+  div {
+    label {
+      font-size: 1.2rem;
+    }
+
+    input {
+      width: 20vw;
+      font-size: 1rem;
+      border-radius: 10px;
+    }
+
+    .fixed-width-box {
+      width: 2vw !important;
+      align-self: center;
+    }
+
+    .fixed-width {
+      width: 20vw !important;
+    }
+
+    .session_button {
+      font-size: 1rem;
+      background-color: whitesmoke;
+      color: $color_titles;
+      border-radius: 25px;
+    }
+  }
+}
+
+@import 'footer';

@@ -1,0 +1,51 @@
+@import 'helpers';
+
+.user_show {
+  height: 85vh;
+}
+
+.theUser {
+  width: 50vw;
+  height: 80vh;
+  margin: 2rem auto;
+}
+
+.user {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 10vh 55vh;
+  grid-template-areas: 'comingSoon''ellaAmalia';
+  width: 30vw;
+  height: 40vw;
+  margin: auto;
+  border-radius: 10px;
+  grid-gap: 0.5rem;
+}
+
+.comingSoon {
+  display: grid;
+  grid-area: comingSoon;
+  text-align: center;
+  background-color: $soft-white;
+  border-radius: 10px;
+
+  h5 {
+    @include mukta-bolder;
+
+    color: $contrast_color;
+    font-size: 1.8rem;
+  }
+}
+
+.ellaAmalia {
+  display: grid;
+  grid-area: ellaAmalia;
+  background-image: url("/assets/amaliahernandez.jpg");
+  background-size: cover;
+  background-color: $color_titles;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  border-radius: 10px;
+}
+
+@import 'footer';

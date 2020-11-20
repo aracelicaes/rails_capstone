@@ -1,0 +1,74 @@
+@import 'helpers';
+
+.footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 7.5vh;
+  grid-template-areas: "footerLogo privacyLi privacyLi footerLi";
+  background-color: $bckg_footer;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  color: $nav_li;
+  font-size: 0.9rem;
+
+  @include mukta-normal;
+}
+
+.footerLogo {
+  display: grid;
+  grid-area: footerLogo;
+
+  @include prata-bolder;
+
+  font-size: 1.2rem;
+  color: $soft_white;
+}
+
+.privacyLi {
+  display: grid;
+  grid-area: privacyLi;
+}
+
+.footerLogo:hover {
+  color: $soft_white;
+}
+
+.privacy,
+.madeBy {
+  color: $contrast_color;
+}
+
+.privacy:hover,
+.madeBy:hover {
+  color: $contrast_color;
+}
+
+.copyright {
+  color: $soft_white;
+}
+
+.copyright:hover {
+  color: $soft_white;
+}
+
+.footerLi {
+  display: grid;
+  grid-area: footerLi;
+  padding-right: 1rem;
+
+  span {
+    color: $soft_white;
+  }
+}
+
+.f_icon {
+  padding-right: 0.8rem;
+  color: $contrast_color;
+  font-size: 1.2rem;
+}
+
+.footer_icons {
+  display: flex;
+  align-items: center;
+  padding-left: 1rem;
+}

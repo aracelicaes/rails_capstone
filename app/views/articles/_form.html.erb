@@ -1,0 +1,42 @@
+<div class="article_form">
+  <%= form_with(model: article, local: true) do |form| %>
+    <% if article.errors.any? %>
+      <div id="error_explanation" class="alert alert-danger">
+        <div class="mr-1 counted_errors"><%= pluralize(article.errors.count, "error") %>:</div>
+
+        <ul class="d-flex flex-column">
+          <% article.errors.full_messages.each do |message| %>
+            <li class="mr-1"><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="field form_image mt-2">
+      <div class="fieldImg d-flex flex-column justify-content-center align-items-center">
+        <%= form.label :image, 'Attach A New Image', class: 'attach_text' %>
+        <%= form.file_field :image, class: 'attach_field' %>
+      </div>
+    </div>
+
+    <div class="field categSelectField mb-4">
+      <p class="categ_select mt-4">Select Category</p>
+      <%= form.label :category%>
+      <%= form.collection_select(:category_id, Category.all, :id, :name, {prompt: 'Categories'}) %>
+    </div>
+
+    <div class="field title_text_field">
+      <%= form.text_field :title, placeholder: 'Title Here', class: 'article_form_style article_title' %>
+    </div>
+
+    <div class="field">
+      <%= form.text_area :text, placeholder: 'Start Writing Your Amazing Tale...', class: 'article_form_style article_text text_field mt-4' %>
+    </div>
+
+
+    <div class="actions d-flex flex-column">
+      <%= form.submit class: 'input_and_a input_style mt-2'  %>
+      <%= link_to 'Cancel', articles_path, class: 'input_and_a a_style mt-2' %> 
+    </div>
+  <% end %>
+</div>
