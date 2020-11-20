@@ -5,30 +5,27 @@ This is my Rails Capstone Project-Articles: EllaMexicana is an online Magazine t
 
 <!-- TABLE OF CONTENTS -->
 ## Table of Contents
-- [README](#readme)
 - [Ruby on Rails Capstone: EllaMexicana Magazine](#ruby-on-rails-capstone-ellamexicana-magazine)
-- [Check Out the Live View Of The Website Here!](#check-out-the-live-view-of-the-website-here)
   - [Table of Contents](#table-of-contents)
 - [About The Project](#about-the-project)
+  - [🌟 Check Out the Live Version Here! 🌟](#-check-out-the-live-version-here-)
+  - [👀 Sneak Peek Of The WebSite!](#-sneak-peek-of-the-website)
   - [Project Extra Feature](#project-extra-feature)
   - [N + 1](#n--1)
 - [Getting started](#getting-started)
   - [Installation](#installation)
-    - [Usage](#usage)
-    - [Run tests](#run-tests)
+  - [Usage:](#usage)
+  - [Run tests:](#run-tests)
   - [Features:](#features)
-  - [Features:](#features-1)
   - [Ruby Gems used in this project](#ruby-gems-used-in-this-project)
 - [Author](#author)
 - [Acknowledgements](#acknowledgements)
-  - [Design Layout](#design-layout)
-  - [Content Development](#content-development)
-  - [Content Development](#content-development-1)
-  - [Images](#images)
-  - [Images](#images-1)
-  - [🤝 Contributing](#-contributing)
-  - [Show your support](#show-your-support)
-  - [📝 License](#-license)
+    - [Design Layout](#design-layout)
+    - [Content Development](#content-development)
+    - [Images](#images)
+- [🤝 Contributing](#-contributing)
+- [Show your support](#show-your-support)
+- [📝 License](#-license)
 <!-- ABOUT THE PROJECT -->
 # About The Project
 This is my Rails Capstone Project-Articles: EllaMexicana is an online Magazine that Empowers, Celebrates and Uplifts Mexican women specially those in the Technology and Science fields.
@@ -39,6 +36,7 @@ The Seed File inside the database contains the Main 5 Categories showcased in th
 ## 🌟 Check Out the Live Version Here! 🌟
 
 [EllaMexicana: Empower, Celebrate, and Elevate Mexican Women](https://ellamexicana.herokuapp.com/)
+[Explanation Video Link Here](https://www.loom.com/share/3a4229ba3c9a425ab004c9762700595c)
 
 ## 👀 Sneak Peek Of The WebSite!
 <details>
