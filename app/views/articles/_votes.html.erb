@@ -9,7 +9,7 @@
 
   <% else %>
     <div class="upvote">
-      <%= link_to article_vote_path(article), method: :post do %>
+      <%= link_to article_vote_path(article), method: :post, local: true do %>
         <i class="fa fa-heart-o mr-2" aria-hidden="true"></i>
       <% end %>
     </div>

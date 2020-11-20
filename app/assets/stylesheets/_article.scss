@@ -30,7 +30,7 @@
 .popular_a,
 .last_a {
   width: 100%;
-  height: 100%;
+  height: 50vh;
 }
 
 .pop_title {
@@ -61,6 +61,8 @@
   grid-area: last;
 
   @include content_styles;
+
+  height: 50vh;
 }
 
 .last:hover {
@@ -85,6 +87,12 @@
 
 .last_title_text:hover {
   color: $soft_white;
+}
+
+.popular_a {
+  .content_img {
+    object-position: 50% 40%;
+  }
 }
 
 .content_img {
@@ -192,6 +200,7 @@
   cursor: pointer;
 }
 
+
 #article_image {
   font-size: 0.8rem;
   cursor: pointer;
@@ -200,9 +209,9 @@
 .article_form_style {
   background-color: white;
   border: none;
-
+  
   @include prata-bolder;
-
+  
   color: $color_titles;
   width: 100%;
 }
@@ -211,26 +220,25 @@
   font-size: 1.5rem;
 }
 
-.article_text {
-  font-size: 1.1rem;
-  height: 50vh;
+.text_field {
+  height: 60vh;
 }
 
 .categSelectField {
   width: 15vw;
-
+  
   .categ_select {
     color: $color_titles;
     font-size: 1.1rem;
     margin-bottom: 0 !important;
-
+    
     @include mukta_normal;
   }
-
+  
   label {
     display: none;
   }
-
+  
   select {
     border: none;
     background-color: transparent;
@@ -239,9 +247,9 @@
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-
+    
     @include mukta-normal;
-
+    
     background-image: url("/assets/icons8-down-button-20-maude.png");
     background-repeat: no-repeat;
     background-position: 100% 50%;
@@ -249,19 +257,19 @@
     color: $color_titles;
     font-size: 1.1rem;
   }
-
+  
   @media (min-width: $layout-breakpoint-large) {
     select {
       width: 10vw;
     }
   }
-
+  
   @media (min-width: $layout-breakpoint-largest) {
     select {
       width: 12vw;
     }
   }
-
+  
   @media (min-width: $layout-breakpoint-extra-large) {
     select {
       width: 10vw;
@@ -271,46 +279,73 @@
 
 .actions {
   font-size: 1.1rem;
-
+  
   .input_and_a {
     padding: 0.3rem 1rem;
     border-radius: 25px;
     color: $soft_white;
-
+    
     @include mukta-normal;
-
+    
     width: 15vw;
   }
-
+  
   .input_style {
     background-color: $bckg_footer;
   }
-
+  
   .a_style {
     text-align: center;
     background-color: $color_titles;
   }
-
+  
   .input_style:hover {
     background-color: $contrast_color;
   }
-
+  
   .a_style:hover {
     background-color: $nav_li;
   }
 }
 
 // ARTICLE SHOW
-.article_show_image {
-  border: none;
+
+.show {
+  height: 100%;
 }
 
-.article_img {
+.article_show {
+  height: 100%;
+  width: 50vw;
+  margin: auto;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 5px;
+}
+
+.article_show_image {
+  height: 55vh;
+  width: 100%;
+
+  .article_img {
+    object-fit: cover;
+  object-position: 50% 54%;
+  border-radius: 8px;
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: 50% 54%;
-  border-radius: 10px;
+  }
+}
+
+.article_title_show {  
+  @include prata-bolder;
+  
+  color: $color_titles;
+  font-size: 1.8rem;
+}
+
+.inside_article_text {
+  width: 100%;
+  white-space: pre-wrap;
 }
 
 .below_image {

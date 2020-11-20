@@ -5,16 +5,13 @@ class Articles::VotesController < ApplicationController
   def create
     @article.votes.where(user_id: current_user.id).first_or_create
 
-    respond_to do |format|
-      format.html { redirect_to @article }
-    end
+    redirect_to @article, notice: 'Thank You For Your Vote! ❤️'
   end
 
   def destroy
     @article.votes.where(user_id: current_user.id).destroy_all
-    respond_to do |format|
-      format.html { redirect_to @article }
-    end
+
+    redirect_to @article, notice: 'Oh Man! Sorry You Didn\'t love it! 😞'
   end
 
   private
