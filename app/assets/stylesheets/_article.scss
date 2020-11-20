@@ -90,7 +90,7 @@
 }
 
 .popular_a {
-  .content_img {
+  .popular_content_img {
     object-position: 50% 40%;
   }
 }
@@ -200,7 +200,6 @@
   cursor: pointer;
 }
 
-
 #article_image {
   font-size: 0.8rem;
   cursor: pointer;
@@ -209,9 +208,9 @@
 .article_form_style {
   background-color: white;
   border: none;
-  
+
   @include prata-bolder;
-  
+
   color: $color_titles;
   width: 100%;
 }
@@ -226,19 +225,19 @@
 
 .categSelectField {
   width: 15vw;
-  
+
   .categ_select {
     color: $color_titles;
     font-size: 1.1rem;
     margin-bottom: 0 !important;
-    
+
     @include mukta_normal;
   }
-  
+
   label {
     display: none;
   }
-  
+
   select {
     border: none;
     background-color: transparent;
@@ -247,9 +246,9 @@
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    
+
     @include mukta-normal;
-    
+
     background-image: url("/assets/icons8-down-button-20-maude.png");
     background-repeat: no-repeat;
     background-position: 100% 50%;
@@ -257,19 +256,19 @@
     color: $color_titles;
     font-size: 1.1rem;
   }
-  
+
   @media (min-width: $layout-breakpoint-large) {
     select {
       width: 10vw;
     }
   }
-  
+
   @media (min-width: $layout-breakpoint-largest) {
     select {
       width: 12vw;
     }
   }
-  
+
   @media (min-width: $layout-breakpoint-extra-large) {
     select {
       width: 10vw;
@@ -279,30 +278,30 @@
 
 .actions {
   font-size: 1.1rem;
-  
+
   .input_and_a {
     padding: 0.3rem 1rem;
     border-radius: 25px;
     color: $soft_white;
-    
+
     @include mukta-normal;
-    
+
     width: 15vw;
   }
-  
+
   .input_style {
     background-color: $bckg_footer;
   }
-  
+
   .a_style {
     text-align: center;
     background-color: $color_titles;
   }
-  
+
   .input_style:hover {
     background-color: $contrast_color;
   }
-  
+
   .a_style:hover {
     background-color: $nav_li;
   }
@@ -329,16 +328,16 @@
 
   .article_img {
     object-fit: cover;
-  object-position: 50% 54%;
-  border-radius: 8px;
-  width: 100%;
-  height: 100%;
+    object-position: 50% 54%;
+    border-radius: 8px;
+    width: 100%;
+    height: 100%;
   }
 }
 
-.article_title_show {  
+.article_title_show {
   @include prata-bolder;
-  
+
   color: $color_titles;
   font-size: 1.8rem;
 }

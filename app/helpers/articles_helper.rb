@@ -31,7 +31,7 @@ module ArticlesHelper
 
     content_tag(:div, class: 'popular') do
       link_to article_path(@most_voted_article), class: 'popular_a' do
-        image_tag url_for(@most_voted_article.image), class: 'content_img' if @most_voted_article.image.attached?
+        image_tag url_for(@most_voted_article.image), class: 'content_img popular_content_img' if @most_voted_article.image.attached?
       end
     end +
       content_tag(:div, class: 'popular content') do
