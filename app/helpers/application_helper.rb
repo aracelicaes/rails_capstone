@@ -63,7 +63,7 @@ module ApplicationHelper
             'SIGN UP'
           end
         end +
-        content_tag(:i, class: 'session_ic fa fa-search pt-1') do
+        content_tag(:i, class: 'search fa fa-search') do
         end
     end
   end
