@@ -35,7 +35,7 @@ The Seed File inside the database contains the Main 5 Categories showcased in th
 
 ## 🌟 Check Out the Live Version Here! 🌟
 
-[EllaMexicana: Empower, Celebrate, and Elevate Mexican Women](https://ellamexicana.herokuapp.com/)
+[EllaMexicana: Empower, Celebrate, and Elevate Mexican Women](https://ellamexicana.herokuapp.com/) <br>
 [Explanation Video Link Here](https://www.loom.com/share/3a4229ba3c9a425ab004c9762700595c)
 
 ## 👀 Sneak Peek Of The WebSite!
